@@ -1,0 +1,273 @@
+﻿.service-listing__yellow-underline {
+    margin: 1.5rem auto;
+}
+
+.service-listing {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 0 0 6rem;
+
+    .service-item__container {
+        width: 270px;
+        margin: 0 auto 1.8rem;
+        border: 1px solid #f0f1f3;
+        padding: 0 0 1.8rem;
+        position: relative;
+        text-align: center;
+
+        &::after {
+            content: '';
+            height: 13px;
+            background-color: #33434f;
+            position: absolute;
+            bottom: 0px;
+            left: -1px;
+            right: -1px;
+        }
+
+        .service-item__image {
+            width: 270px;
+            height: 270px;
+            background-color: #f0f1f3;
+            background-size: 100% auto;
+            background-position: 0px 28px;
+            background-repeat: no-repeat;
+        }
+
+        .service-item__text {
+            padding: 0 0.5rem;
+
+            .service-item__title {
+                font-family: 'robotomedium';
+                color: #2c3e50;
+                text-transform: capitalize;
+                font-size: 1.1rem;
+                padding: 1rem 0 0.5rem;
+            }
+
+            .service-item__description {
+                font-family: 'latoregular';
+                color: #a1b1bc;
+                font-size: 1.05rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
+
+.service-contact__container {
+    position: relative;
+    z-index: 1;
+    background: url('/img/service_contact_bg.png') no-repeat center center;
+    background-size: 100% 100%;
+    background-color: #282828;
+    padding: 50px 0;
+
+    .service-contact__question {
+        font-family: 'robotobold';
+        color: #fff;
+        display: inline-block;
+        margin: 0;
+        font-size: 1.3rem;
+
+        @include respond-to-min($tabletSize) {
+            font-size: 2rem;
+        }
+
+        @include respond-to-min($desktopSize) {
+        }
+
+        @include respond-to-min($laptopSize) {
+        }
+    }
+
+    .service-contact__help {
+        font-family: 'robotolight';
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        display: block;
+
+        @include respond-to-min($tabletSize) {
+            font-size: 2rem;
+            margin: 0;
+        }
+        @include respond-to-min($desktopSize) {
+            display: inline-block;
+            margin: 0 0  0 5px;
+        }
+    }
+
+    .service-contact__white-button {
+        float: left;
+        margin: 1rem 0 0;
+
+        @include respond-to-min($laptopSize) {
+            float: right;
+            margin: 0;
+        }
+    }
+}
+
+.list-service-detail{
+    position: relative;
+    z-index: 1;
+}
+.service-item-detail__container {
+    position: relative;
+    overflow: hidden;
+
+    @include respond-to-min($tabletSize) {
+        height: 600px;
+    }
+
+    .container {
+        @include respond-to-min($tabletSize) {
+            position: relative;
+            top: 50%;
+            transform: translate(0, -55%);
+        }
+    }
+
+    &:nth-child(2n+1) {
+        background-color: #fff;
+
+        .service-item-detail__image {
+            right: 50%;
+            margin-right: 110px;
+        }
+
+        .service-item-detail__content {
+            @include respond-to-min($tabletSize) {
+                margin-left: 50%;
+            }
+        }
+    }
+
+    &:nth-child(2n) {
+        background-color: #f0f1f3;
+
+        .service-item-detail__image {
+            left: 50%;
+            margin-left: 110px;
+        }
+    }
+
+    .service-item-detail__image {
+        position: absolute;
+        bottom: 0px;
+        max-height: 100%;
+        display: none;
+
+        @include respond-to-min($tabletSize) {
+            display: block;
+        }
+    }
+
+    .service-item-detail__content {
+        text-align: left;
+        position: relative;
+        width: 100%;
+        padding: 50px 0;
+
+        @include respond-to-min($tabletSize) {
+            width: 50%;
+            padding: 0;
+        }
+
+        .service-item-detail__title {
+            font-family: 'robotoblack';
+            text-transform: uppercase;
+            color: #282828;
+            font-size: 1.2rem;
+            padding: 0.5rem 0 0;
+
+            @include respond-to-min($tabletSize) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .service-item-detail__description {
+            font-family: 'robotolight';
+            color: #6a7885;
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
+    }
+}
+
+.service-technology__container {
+    position: relative;
+    z-index: 1;
+    background: url('/img/service-tech-bg.png') no-repeat center center;
+    background-size: cover;
+    background-color: #333333;
+    padding: 110px 0 90px;
+
+    .container {
+        text-align: center;
+
+        .row{
+            text-align: left;
+        }
+    }
+
+    .service-technology__title {
+        font-family: 'robotobold';
+        padding: 0;
+        margin: 0px;
+        text-transform: capitalize;
+        color: #fff;
+        font-size: rem(30px);
+
+        @include respond-to-min($tabletSize) {
+            font-size: rem(56px);
+        }
+    }
+
+    .service-technology-column__title {
+        font-family: 'robotoregular';
+        color: #fff;
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        font-size: rem(18px);
+        padding: 20px 0 10px;
+
+        border-bottom: 2px solid rgba(236, 240, 241, 0.1);
+
+        @include respond-to-min($tabletSize) {
+            padding: 40px 0 10px;
+        }
+
+        @include respond-to-min($desktopSize) {
+            width: 75%;
+        }
+    }
+
+    ul {
+        list-style: none;
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        @include respond-to-min($desktopSize) {
+            width: 75%;
+        }
+
+        li {
+            color: #a1b1bc;
+            font-family: 'robotoregular';
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+            border-bottom: 1px solid rgba(236, 240, 241, 0.1);
+
+            padding: 10px 0 10px 20px;
+            background: url('/img/service_check_icon.png') no-repeat 0 center;
+            font-size: rem(14px);
+        }
+    }
+}

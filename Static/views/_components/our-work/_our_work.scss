@@ -1,0 +1,306 @@
+﻿
+
+
+.list-projects {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+    li.project-item {
+        float: left;
+        width: 100%;
+        position: relative;
+
+        @include respond-to-min($tabletSize) {
+            width: 50%;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .project-holder-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            position: absolute;
+            text-align: left;
+            padding: 5px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+
+            @include respond-to-min($desktopSize) {
+                padding: 15px;
+            }
+
+            .project-holder {
+                width: 100%;
+                background-color: rgba(40, 40, 40,0.95);
+                height: 100%;
+                position: relative;
+
+                .text {
+                    position: absolute;
+                    font-size: 11px;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    width: 90%;
+                    -webkit-transition-delay: 1s;
+                    transition-delay: 1s;
+                    @include align-center-block(50%,50%);
+
+                    @include respond-to-min($laptopSize) {
+                        width: 60%;
+                    }
+
+                    .h_main {
+                        font-size: 0.5rem;
+                        letter-spacing: 3px;
+                        line-height: 1rem;
+                        color: #fff;
+                        font-family: "latoblack";
+                        text-transform: uppercase;
+                        transform: translate(0px,-5px);
+                        transition: all .3s ease-out;
+
+                        @include respond-to-min($desktopSize) {
+                            font-size: 12px;
+                            letter-spacing: 4px;
+                            line-height: 1rem;
+                        }
+
+                        @include respond-to-min($laptopSize) {
+                            font-size: 12px;
+                            letter-spacing: 5px;
+                            line-height: 1rem;
+                        }
+                    }
+
+                    .wave_hover {
+                        padding: 5px 0;
+
+                        @include respond-to-min($desktopSize) {
+                            padding: 20px 0px 25px;
+                        }
+
+                        @include respond-to-min($laptopSize) {
+                            padding: 20px 0px 25px;
+                        }
+
+                        .yellow-divider {
+                            width: 0%;
+                            transition: width 0.5s ease-in-out;
+                        }
+                    }
+
+                    .title {
+                        font-family: "robotobold";
+                        letter-spacing: -0.03em;
+                        color: #efefef;
+                        transform: translate(0px,-10px);
+                        transition: all .3s ease-out;
+                        -webkit-transition-delay: 0.05s;
+                        transition-delay: 0.05s;
+                        font-size: 1.5rem;
+                        line-height: 1.5rem;
+
+                        @include respond-to-min($desktopSize) {
+                            font-size: 3rem;
+                            line-height: 3rem;
+                        }
+
+                        @include respond-to-min($laptopSize) {
+                            font-size: 4rem;
+                            line-height: 4rem;
+                        }
+                    }
+
+                    .subtitle {
+                        color: #fff;
+                        font-size: 1rem;
+                        line-height: 1.3rem;
+                        margin: 15px 0 20px;
+                        letter-spacing: 1px;
+                        font-family: 'robotolight';
+                        transform: translate(0px,-10px);
+                        transition: all .3s ease-out;
+                        -webkit-transition-delay: 0.05s;
+                        transition-delay: 0.05s;
+
+                        @include respond-to-min($desktopSize) {
+                            font-size: 1.2rem;
+                            line-height: 1.7rem;
+                            margin: 20px 0 40px;
+                            letter-spacing: 1px;
+                        }
+
+                        @include respond-to-min($laptopSize) {
+                            font-size: 22px;
+                            line-height: 1.7rem;
+                            margin: 20px 0 50px;
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    .button-yellow-border {
+                        @include respond-to-min($desktopSize) {
+                            font-size: 1rem;
+                            padding: 1rem 2.5rem;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                opacity: 1;
+
+                .text {
+                    .wave_hover {
+
+                        .yellow-divider {
+                            width: 70px;
+                        }
+                    }
+
+                    .h_main {
+                        transform: translate(0px,0px);
+                        transition: all .3s ease-in;
+                    }
+
+                    .title {
+                        transform: translate(0px,0px);
+                    }
+
+                    .subtitle {
+                        transform: translate(0px,0px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.project-modal {
+    position: absolute;
+    z-index: 3;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50px;
+
+    .rb-close {
+        position: absolute;
+        top: 1.3em;
+        right: 1em;
+        width: 2em;
+        height: 2em;
+        text-indent: -9000px;
+        cursor: pointer;
+        z-index: 1000;
+        opacity: 0;
+        color: #fff;
+    }
+
+    .rb-close::before {
+        content: 'x';
+        font-weight: normal;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 2em;
+        line-height: 0.6;
+        text-align: center;
+        text-indent: 0px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .project-holder-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        position: absolute;
+        text-align: left;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        cursor: pointer;
+        transition: none;
+
+        .project-holder {
+            width: 100%;
+            background-color: rgba(40, 40, 40,0.95);
+            height: 100%;
+            position: relative;
+            transition: none;
+
+            .text {
+                position: absolute;
+                font-size: 11px;
+                letter-spacing: 1px;
+                width: 60%;
+                text-align: center;
+                transition: none;
+                @include align-center-block(50%,50%);
+
+                .h_main {
+                    font-size: 12px;
+                    letter-spacing: 5px;
+                    line-height: 1.2;
+                    color: #fff;
+                    font-family: "latoblack";
+                    text-transform: uppercase;
+                    transition: none;
+                }
+
+                .wave_hover {
+                    padding: 30px 0px 35px;
+
+                    .yellow-divider {
+                        width: 100px;
+                    }
+                }
+
+                .title {
+                    font-size: 5.625rem;
+                    line-height: 60px;
+                    font-family: robotoblack;
+                    letter-spacing: -0.03em;
+                    color: #efefef;
+                    transition: none;
+                }
+
+                .subtitle {
+                    color: #fff;
+                    font-size: 22px;
+                    line-height: 1.7rem;
+                    font-family: 'robotolight';
+                    letter-spacing: 1px;
+                    margin-bottom: 50px;
+                    margin-top: 20px;
+                    transition: none;
+                }
+            }
+
+            .button-yellow-border {
+                display: none;
+            }
+        }
+    }
+}

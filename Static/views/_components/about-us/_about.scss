@@ -1,0 +1,620 @@
+
+.about-group__content-container {
+	background-color: #fff;
+	background-size: cover;
+	background-position: center center;
+	padding: 100px 0 80px;
+	position: relative;
+	z-index: 1;
+
+	.about-us-info {
+		background: #fff;
+		text-align: center;
+		margin: 0 0 20px;
+		padding: 20px 0;
+
+		.about-us-icon {
+			width: 78px;
+			height: 78px;
+			background-size: cover;
+			margin: 40px auto 10px auto;
+		}
+
+		.statistic-number {
+			font-size: 3.5rem;
+			font-family: robotoblack;
+			color: #cedae1;
+			letter-spacing: 2px;
+		}
+
+		p {
+			font-size: 0.8rem;
+			font-family: robotoblack;
+			color: #000;
+			margin-top: -10px;
+			letter-spacing: 1px;
+		}
+	}
+
+	.about-us-certified__infor {
+		width: 100%;
+		padding: 0 15px 0;
+		float: left;
+
+		@include respond-to-min($tabletSize) {
+			width: 60%;
+			padding: 0 15px 0 0;
+		}
+
+		.about-certified__description {
+			font-family: 'robotothin';
+			padding: 0;
+			margin: 0;
+
+			@include respond-to-min($tabletSize) {
+				font-size: rem(20px);
+				line-height: 30px;
+			}
+
+			@include respond-to-min($desktopSize) {
+				font-size: rem(26px);
+				line-height: 35px;
+			}
+
+			@include respond-to-min($laptopSize) {
+				font-size: rem(35px);
+				line-height: 40px;
+			}
+
+			span {
+				font-weight: bold;
+			}
+		}
+
+		p {
+			color: #9ca5ae;
+			font-weight: normal;
+			font-family: 'robotolight';
+			width: 90%;
+			margin-top: 20px;
+
+			@include respond-to-min($tabletSize) {
+				font-size: rem(16px);
+				line-height: 25px;
+			}
+
+			@include respond-to-min($desktopSize) {
+				font-size: rem(18px);
+				line-height: 30px;
+			}
+
+			@include respond-to-min($laptopSize) {
+				font-size: rem(24px);
+				line-height: 35px;
+				margin-top: 62px;
+			}
+		}
+	}
+
+	.about-us-certified__number {
+		width: 100%;
+		text-align: center;
+		padding: 0 15px 0;
+		float: left;
+
+		@include respond-to-min($tabletSize) {
+			width: 40%;
+			padding: 0 0 0 15px;
+		}
+
+		.number__certified {
+			font-family: 'robotobold';
+			padding: 0 0 20px 0;
+			margin: 0;
+			color: #9ca5ae;
+			font-size: rem(200px);
+			line-height: 200px;
+
+			@include respond-to-min($tabletSize) {
+				font-size: rem(240px);
+				line-height: 120px;
+			}
+
+			@include respond-to-min($desktopSize) {
+				font-size: rem(300px);
+				line-height: 150px;
+			}
+
+			@include respond-to-min($laptopSize) {
+				font-size: rem(357px);
+				line-height: 200px;
+			}
+		}
+
+		p {
+			color: #9ca5ae;
+			font-family: robotothin;
+			font-size: rem(12px);
+			line-height: 20px;
+
+			@include respond-to-min($tabletSize) {
+				font-size: rem(14px);
+				line-height: 30px;
+			}
+
+			@include respond-to-min($desktopSize) {
+				line-height: 35px;
+			}
+
+			@include respond-to-min($laptopSize) {
+				font-size: rem(20px);
+				line-height: 40px;
+			}
+		}
+	}
+
+	&.about-offices-block__container {
+		background-color: #282828;
+		text-align: center;
+	}
+
+	.yellow-divider {
+		margin: 20px 0;
+
+		@include respond-to-min($tabletSize) {
+			margin: 30px 0;
+		}
+	}
+
+	.about-offices-block__content {
+		text-align: center;
+
+		h3 {
+			font-family: 'robotoblack';
+			color: #fff;
+			text-align: center;
+			line-height: 35px;
+			font-size: 24px;
+			width: 95%;
+			margin: 0 auto;
+
+			@include respond-to-min($tabletSize) {
+				font-size: rem(35px);
+				line-height: 40px;
+			}
+
+			@include respond-to-min($desktopSize) {
+				font-size: rem(40px);
+				line-height: 45px;
+			}
+
+			@include respond-to-min($laptopSize) {
+				font-size: rem(56px);
+				line-height: 60px;
+			}
+		}
+	}
+
+	.about-offices-block__bg {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center center;
+		display: none;
+
+		@include respond-to-min($desktopSize) {
+			display: block;
+		}
+	}
+
+	.about-offices-block__image {
+		display: inline-block;
+		max-width: 80%;
+
+		@include respond-to-min($desktopSize) {
+			display: none;
+		}
+	}
+
+	.about-offices-block__description {
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+		font-family: 'robotothin';
+		color: #fff;
+
+		margin: 0;
+		padding: 0;
+		line-height: 28px;
+		font-size: rem(20px);
+		padding: 20px 0;
+
+		@include respond-to-min($tabletSize) {
+			line-height: 40px;
+			font-size: rem(28px);
+		}
+
+		@include respond-to-min($desktopSize) {
+			width: 50%;
+			left: 50%;
+			margin-left: 30px;
+			padding: 170px 0px 300px;
+			line-height: 34px;
+			font-size: rem(26px);
+			text-align: left;
+		}
+
+		@include respond-to-min($laptopSize) {
+			margin-left: 75px;
+			padding: 220px 0px 300px;
+			line-height: 60px;
+			font-size: rem(46px);
+		}
+
+		span {
+			color: #f9cd1f;
+			font-family: 'robotoregular';
+		}
+	}
+
+
+
+
+
+	.about-business-top-block__content {
+		position: absolute;
+		display: block;
+		width: 51%;
+		@include align-center-block(50%,50%);
+		color: #000;
+		top: 25%;
+
+
+		h3 {
+			font-family: 'robotobold';
+			font-size: 2.2rem;
+			line-height: 60px;
+			padding: 0 0 20px 0;
+			margin: 0;
+		}
+
+		.about-strategies {
+			font-family: 'robotoregular';
+			font-size: 1.5rem;
+			line-height: 20px;
+			padding: 0 0 30px 0;
+			margin: 0;
+			color: #6f7070;
+		}
+
+		.about-business-description {
+			font-size: 1.5rem;
+			font-family: robotolight;
+			line-height: 35px;
+			color: #6a7885;
+		}
+	}
+
+	.about-socially-top-block__content {
+		position: absolute;
+		display: block;
+		width: 61%;
+		height: 100%;
+		@include align-center-block(50%,50%);
+		color: #000;
+
+		h3 {
+			font-family: 'robotobold';
+			font-size: 2.2rem;
+			line-height: 60px;
+			padding: 0 0 20px 0;
+			margin: 0;
+			margin-top: 8%;
+		}
+
+		.about-strategies {
+			font-family: 'robotoregular';
+			font-size: 1.8rem;
+			line-height: 20px;
+			padding: 0 0 30px 0;
+			margin: 0;
+			color: #6f7070;
+		}
+
+		.about-socially-description {
+			font-size: 1.65rem;
+			font-family: robotolight;
+			line-height: 35px;
+			color: #6a7885;
+			text-align: justify;
+		}
+
+		.about-socially-image {
+			width: 100%;
+			display: inline-block;
+
+			.about-socially-image__left {
+				width: 67.1%;
+				float: left;
+				display: inline-block;
+
+				img {
+					width: auto;
+					margin: 0 5px 5px 0;
+				}
+			}
+
+			.about-socially-image__right {
+				width: auto;
+				margin-left: -10px;
+				display: inline-block;
+			}
+		}
+	}
+
+	.about-community-top-block__content {
+		position: absolute;
+		display: block;
+		width: 100%;
+
+		.about-community__background {
+			width: 100%;
+			display: block;
+			height: auto;
+		}
+
+		h3 {
+			font-family: 'robotobold';
+			font-size: rem(56px);
+			line-height: 40px;
+			color: #886e07;
+			margin: 0 0;
+			padding: 120px 0 30px 0;
+		}
+	}
+}
+
+/*Our mission - Our Vision*/
+
+.our-mission-container {
+	width: 100%;
+	float: left;
+
+	&:nth-child(2n){
+		.content-holder{
+			float: right;
+		}
+
+		.big-image{
+			float: left;
+			text-align: left;
+		}
+	}
+	&:nth-child(2n+1){
+		margin: 0 0 30px;
+	}
+
+	.content-holder {
+		float: left;
+		color: #6a7885;
+		font-family: 'robotolight';
+		width: 100%;
+		padding: 0;
+		font-size: rem(16px);
+		line-height: rem(24px);
+
+		@include respond-to-min($tabletSize) {
+			font-size: rem(24px);
+			line-height: rem(34px);
+			padding: 40px 0 0;
+			width: 65%;
+		}
+
+		@include respond-to-min($desktopSize) {
+			padding: 40px 0 0;
+			font-size: rem(24px);
+			line-height: rem(40px);
+		}
+
+		@include respond-to-min($laptopSize) {
+			width: 800px;
+			padding: 80px 0 0;
+		}
+
+		h2 {
+			font-family: 'robotoblack';
+			color: #282828;
+			padding: 0;
+			margin: 0;
+			font-size: rem(24px);
+			line-height: rem(24px);
+
+			@include respond-to-min($tabletSize) {
+				font-size: rem(30px);
+				line-height: rem(30px);
+			}
+
+			@include respond-to-min($desktopSize) {
+				font-size: rem(46px);
+				line-height: rem(46px);
+			}
+
+			@include respond-to-min($laptopSize) {
+				font-size: rem(56px);
+				line-height: rem(56px);
+			}
+		}
+
+		.description{
+			text-align: justify;
+		}
+	}
+
+	.big-image {
+		float: right;
+		text-align: right;
+		position: relative;
+		display: none;
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		@include respond-to-min($tabletSize) {
+			display: inline-block;
+			width: 30%;
+			text-align: right;
+		}
+
+		@include respond-to-min($desktopSize) {
+			width: 265px;
+		}
+
+		@include respond-to-min($laptopSize) {
+		}
+	}
+}
+
+/*Section our value*/
+.section-our-values {
+	background: url('/img/bgOurValues.jpg') repeat-y center top;
+	background-size: cover;
+	text-align: center;
+
+	.our-values-container {
+		margin: 0 auto;
+		text-align: left;
+
+		.our-value-header {
+			text-align: center;
+
+			h2 {
+				font-family: 'robotoblack';
+				color: #fff;
+				margin: 0;
+
+				@include respond-to-min($tabletSize) {
+					font-size: 1.2rem;
+					line-height: 1rem;
+				}
+
+				@include respond-to-min($desktopSize) {
+					font-size: 1.2rem;
+					line-height: 1rem;
+				}
+
+				@include respond-to-min($laptopSize) {
+					font-size: 3.5rem;
+					line-height: 3rem;
+				}
+
+				@include respond-to-min($bigScreen) {
+					font-size: 3.5rem;
+					line-height: 3rem;
+				}
+			}
+
+			.header-underline {
+				padding-bottom: 50px;
+			}
+		}
+
+		.our-value-item {
+			width: 100%;
+			min-height: 210px;
+			background: #fff;
+			padding: 35px 40px;
+			margin-bottom: 40px;
+
+			.value-index {
+				font-family: 'robotoblack';
+				color: #cedae1;
+				padding: 0 0 25px;
+				margin: 0;
+				width: 90px;
+				margin-right: 45px;
+				float: left;
+
+				@include respond-to-min($tabletSize) {
+					font-size: 5rem;
+					line-height: 5rem;
+				}
+
+				@include respond-to-min($desktopSize) {
+					font-size: 1.2rem;
+					line-height: 1rem;
+				}
+
+				@include respond-to-min($laptopSize) {
+					font-size: 10rem;
+					line-height: 7rem;
+				}
+
+				@include respond-to-min($bigScreen) {
+					font-size: 10rem;
+					line-height: 7rem;
+				}
+			}
+
+			.value-description {
+				color: #a1b1bc;
+				font-family: 'robotothin';
+
+				@include respond-to-min($tabletSize) {
+					font-size: 1.5rem;
+					line-height: 1.875rem;
+				}
+
+				@include respond-to-min($desktopSize) {
+					font-size: 1.5rem;
+					line-height: 1.875rem;
+				}
+
+				@include respond-to-min($laptopSize) {
+					font-size: 1.5rem;
+					line-height: 1.875rem;
+				}
+
+				@include respond-to-min($bigScreen) {
+					font-size: 1.5rem;
+					line-height: 1.875rem;
+				}
+
+				h3 {
+					color: #2c3e50;
+					font-family: 'robotothin';
+					margin: 0;
+					padding: 0 0 15px;
+
+					@include respond-to-min($tabletSize) {
+						font-size: 2rem;
+						line-height: 2rem;
+					}
+
+					@include respond-to-min($desktopSize) {
+						font-size: 2rem;
+						line-height: 2rem;
+					}
+
+					@include respond-to-min($laptopSize) {
+						font-size: 2rem;
+						line-height: 2rem;
+					}
+
+					@include respond-to-min($bigScreen) {
+						font-size: 2rem;
+						line-height: 2rem;
+					}
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+﻿---
+title: 'Service Technology'
+---
+<div class="service-technology__container">
+    <div class="container">
+        <h2 class="service-technology__title">Our Technologies</h2>
+        <div class="yellow-divider service-listing__yellow-underline">
+        </div>
+
+        <div class="row">
+            {{#each services.technologies}}
+            {{> _service-technology-column this}}
+            {{/each}}
+        </div>
+    </div>
+</div>

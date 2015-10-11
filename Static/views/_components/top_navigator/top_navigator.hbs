@@ -1,0 +1,54 @@
+---
+title: "Top Navigator"
+---
+<section class="top-navigator-container" data-require="base/top-navigator">
+    <a class="top-navigotar__link" href="/{{views.paths.0.path}}" title=""><img class="top-navigator__logo" src="/img/logo.png" alt="" /></a>
+    <div class="hamburger-menu__container">
+        <span class="hamburger-menu__button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <label class="hamburger-menu__text">Menu</label>
+        </span>
+    </div>
+    <div class="top-navigator__overlay-mask">
+
+    </div>
+    <div class="top-navigator__menu-container">
+        <ul>
+            <li>
+                <a class="selected-item" href="/{{views.paths.0.path}}" title="">Home Page</a>
+            </li>
+            <li>
+                <a href="/{{views.paths.1.path}}" title="">About Us</a>
+            </li>
+            <li>
+                <a href="/{{views.paths.3.path}}" title="">Our Team</a>
+            </li>
+            <li>
+                <a href="/{{views.paths.5.path}}" title="">Services</a>
+            </li>
+            <li>
+                <a href="#" title="">Products</a>
+            </li>
+            <li>
+                <a href="#" title="">How we work</a>
+            </li>
+            <li>
+                <a href="#" title="">Case studies</a>
+            </li>
+            <li>
+                <a href="/{{views.paths.6.path}}" title="">Careers</a>
+            </li>
+            <li>
+                <a href="#" title="">Contact us</a>
+            </li>
+        </ul>
+        <div class="top-navigator__search-container">
+            <input class="top-navigator__search-input" />
+        </div>
+    </div>
+</section>
+
+{{> _search }}

@@ -1,0 +1,150 @@
+﻿{
+    "introduction": {
+        "title": "Our Services",
+        "subTitle": "A world-class software development company<br/>on the rise"
+    },
+
+    "description": {
+        "title": "Your business is one-of-a-kind",
+        "subTitle": "Your Software Strategies Should Be Too",
+        "description": "Customized, tailored, unique technology services is exactly what the global team of experts at Niteco strives for. Our clients range from rising mobile app makers, to award-winning wineries, to market-leading newspapers."
+    },
+
+    "data": [
+        {
+            "imgUrl": "/img/service-item-image1.png",
+            "imgSmallUrl": "/img/service-item-image-small1.png",
+            "title": "Cms & Web Development",
+            "bigTitle": "Cms & Web Development",
+            "sortDescription": "sort description will be here sort description will be here",
+            "fullDescription": "Whether you want a simple blog, an e-commerce site, a Sharepoint solution, or an enterprise portal, we can provide comprehensive solutions for your needs, from consultation & design through to development, deployment, and maintenance. <br/></br>Our programmers have conquered both Front End and Back End development, across technologies from WordPress to EPiServer, for some of the most visited digital newspapers in Europe."
+        },
+
+        {
+            "imgUrl": "/img/service-item-image2.png",
+            "imgSmallUrl": "/img/service-item-image-small2.png",
+            "title": "E-Commerce",
+            "bigTitle": "E-Commerce",
+            "sortDescription": "sort description will be here sort description will be here",
+            "fullDescription": "Sales maximization, flexibility, and top-notch security are just the starting point. Our experienced e-commerce developers have grown past that to create excellent global e-commerce platforms that elevate brands around the world. <br/><br/>If you're developing for the EPiServer Commerce platform, we've got you covered with 23 EPiServer Commerce certified developers."
+        },
+
+        {
+            "imgUrl": "/img/service-item-image1.png",
+            "imgSmallUrl": "/img/service-item-image-small1.png",
+            "title": "Mobile Development",
+            "bigTitle": "Mobile Development",
+            "sortDescription": "sort description will be here sort description will be here",
+            "fullDescription": "Your iOS, Android, and Windows Phone applications will come to life in our hands. We can take care of everything from the user journey and wireframes through to design and development. <br/><br/>We are also experienced in developing cross-platform and HTML-based solutions, and supporting back-end services. Our portfolio includes apps for every kind of mobile device including wearables, and across categories from large-distribution newspaper apps to productivity & games."
+        },
+
+        {
+            "imgUrl": "/img/service-item-image2.png",
+            "imgSmallUrl": "/img/service-item-image-small2.png",
+            "title": "Software Development",
+            "bigTitle": "Custom Software Development",
+            "sortDescription": "sort description will be here sort description will be here",
+            "fullDescription": "Want an add-on to update stock market news on your website? Or a convenient content generator to turn website content into prints? Or a worktime-recording app to better operate your business? <br/><br/>We have mastered a wide range of development stacks and platforms, and can turn your ideas into reality - just as we have done with some of the biggest media companies in Europe."
+        },
+
+        {
+            "imgUrl": "/img/service-item-image1.png",
+            "imgSmallUrl": "/img/service-item-image-small1.png",
+            "title": "UI / UX Design",
+            "bigTitle": "UI / UX Design",
+            "sortDescription": "sort description will be here sort description will be here",
+            "fullDescription": "Your system's success is measured by its usability. Working closely with our clients and the development team, our designers will take you from user flow to wireframes to design, and then to a fully realised product. Your final system will be both well-conceptualized and well-executed."
+        },
+        {
+            "imgUrl": "/img/service-item-image1.png",
+            "imgSmallUrl": "/img/service-item-image-small1.png",
+            "title": "Testing",
+            "bigTitle": "Testing",
+            "sortDescription": "sort description will be here sort description will be here",
+            "fullDescription": "Niteco has an extremely robust QA process integrated into all of the work we do. Testers are core members of the development team, but separate reporting lines mean that quality is independently verified before release. We can also provide testing as a stand-alone service to ensure the quality of your product."
+        },
+        {
+            "imgUrl": "/img/service-item-image2.png",
+            "imgSmallUrl": "/img/service-item-image-small2.png",
+            "title": "Consulting",
+            "bigTitle": "Consulting",
+            "sortDescription": "sort description will be here sort description will be here",
+            "fullDescription": "Our solution architects have designed and deployed massive public systems, and medium-sized internal company applications. Working together with the teams and clients, they help to ensure that the solution is perfectly matched to the requirements."
+        }
+    ],
+
+    "viewall": {
+        "imgUrl": "/img/service-item-image1.png",
+        "title": "View All Technologies",
+        "sortDescription": "sort description will be here sort description will be here",
+        "fullDescription": "Niteco has an extremely robust QA process integrated into all of the work we do. Testers are core members of the development team, but separate reporting lines mean that quality is independently verified before release. We can also provide testing as a stand-alone service to ensure the quality of your product."
+    },
+
+    "technologies": [
+        {
+            "title": "CMS & Web",
+            "contents": [
+                "EPiServer",
+                "Sharepoint",
+                "Wordpress",
+                "Umbraco",
+                "DrupalScreen",
+                "Joomla",
+                "Azure",
+                "Amazon Web Services"
+            ]
+        },
+        {
+            "title": "Coding",
+            "contents": [
+                ".Net",
+                "C#",
+                "Java",
+                "HTML5",
+                "Javascript",
+                "CSS3",
+                "Objective-C",
+                "Swift"
+            ]
+        },
+        {
+            "title": "UI / UX Design",
+            "contents": [
+                "User Flows",
+                "Wireframes",
+                "Prototyping",
+                "Responsive Design",
+                "Mobile Websites",
+                "Application Design",
+                "Infographics",
+                "Data Visualization"
+            ]
+        },
+        {
+            "title": "Mobile",
+            "contents": [
+                "iOS",
+                "Android",
+                "Windows Phone",
+                "Xamarin"
+            ]
+        },
+        {
+            "title": "Testing",
+            "contents": [
+                "Robot Framework",
+                "Selenium",
+                "Coded UI",
+                "QTP"
+            ]
+        },
+        {
+            "title": "E-Commerce",
+            "contents": [
+                "EPiServer Commerce",
+                "Magento",
+                "nopCommerce"
+            ]
+        }
+    ]
+}

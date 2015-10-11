@@ -1,0 +1,29 @@
+
+$base-font-size: 16px;
+
+@function rem($values) {
+
+	@if type-of($values) == "list" {
+
+		$rems: ();
+
+		@each $value in $values {
+			$rems: append($rems, rem($value));
+		}
+
+		@return $rems;
+	}
+
+	@if type-of($values) == "number" {
+
+		@if $values == 0 {
+			@return $values;
+		}
+
+		@if unit($values) == px {
+			@return ($values / $base-font-size) * 1rem;
+		}
+	}
+
+	@return $values;
+}

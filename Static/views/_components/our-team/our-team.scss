@@ -1,0 +1,211 @@
+﻿.awards-section {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+
+    .header {
+        padding: 40px 0;
+    }
+
+    .awards {
+        margin-top: 25px;
+
+        .__award-logo-container {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .award-group {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        .__award {
+            width: 25%;
+            float: left;
+        }
+    }
+
+    .award {
+        border-bottom: solid 15px #f0f1f3;
+        height: 395px;
+        position: relative;
+        cursor: pointer;
+
+        .__award-logo {
+            width: 100%;
+            height: 298px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                opacity: 0.8;
+                transition: all 0.15s ease-in-out;
+            }
+        }
+
+        .__award-category {
+            font-family: 'robotothin';
+            position: relative;
+            bottom: 0px;
+            width: 100%;
+            right: 0;
+            height: 82px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #a1b1bc;
+            text-align: left;
+            padding-left: 25px;
+            border-right: solid 1px #f0f1f3;
+            display: block;
+
+            @include respond-to-min($tabletSize) {
+                font-size: 1.2rem;
+                line-height: 1rem;
+            }
+
+            @include respond-to-min($desktopSize) {
+                font-size: 1.2rem;
+                line-height: 1rem;
+            }
+
+            @include respond-to-min($laptopSize) {
+                font-size: 0.935rem;
+                line-height: 1.5rem;
+            }
+
+            @include respond-to-min($bigScreen) {
+                font-size: 0.935rem;
+                line-height: 1.5rem;
+            }
+
+            b {
+                padding-top: 18px;
+                color: #2c3e50;
+                display: inline-block;
+                font-family: 'robotoregular';
+
+                @include respond-to-min($tabletSize) {
+                    font-size: 1.125rem;
+                    line-height: 1rem;
+                }
+
+                @include respond-to-min($desktopSize) {
+                    font-size: 1.2rem;
+                    line-height: 1rem;
+                }
+
+                @include respond-to-min($laptopSize) {
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                }
+
+                @include respond-to-min($bigScreen) {
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+
+        .__award-btn {
+            height: 16px;
+            position: absolute;
+            top: 32px;
+            right: 23px;
+            width: 16px;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+
+            path {
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+            }
+        }
+
+        &.__award--selected {
+            .__award-btn {
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            .__award-btn #Rectangle-51 {
+                fill: #D8262C;
+            }
+        }
+
+        &:hover {
+            .__award-logo {
+                width: 100%;
+                height: 298px;
+
+                img {
+                    opacity: 1;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .award-info {
+        border-bottom: 1px solid #E9E9E9;
+        border-top: 1px solid #E9E9E9;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    .award-details {
+        display: none;
+
+        .__desc {
+            font-family: 'tiempos', Georgia;
+            color: #8B8B8B;
+            margin-top: 10px;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+
+        .__title {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .__container {
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+
+            &:after {
+                content: " ";
+                display: block;
+                clear: both;
+            }
+        }
+    }
+
+    .award-details--active {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    .award .__award-logo, .award .__award-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .award-list--top .__group--active ~ .__group .__award {
+        display: none;
+    }
+
+    .award-list--bottom .__award {
+        display: none;
+    }
+
+    .award-list--bottom .__group--active ~ .__group .award {
+        display: block;
+    }
+}

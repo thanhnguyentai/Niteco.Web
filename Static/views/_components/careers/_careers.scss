@@ -1,0 +1,351 @@
+.careers-block {
+    position: relative;
+    z-index: 1;
+}
+.careers-middle-block {
+    padding: 106px 0 82px;
+    background: #333;
+    @include respond-to-min($desktopSize) {
+        background: url('/img/bg.jpg') #333;
+    }
+    @include respond-to-min($laptopSize) {
+        background: url('/img/bg.jpg') #333;
+    }
+    .careers-step-detail {
+        position: relative;
+        text-align: center;
+        padding: 66px 15px;
+        background: #fff;
+        margin-bottom: 66px;
+        @include respond-to-min($desktopSize) {
+            margin-bottom: 0;
+        }
+        @include respond-to-min($laptopSize) {
+            margin-bottom: 0;
+        }
+        @include respond-to-min($tabletSize) {
+            margin-bottom: 0;
+            padding-bottom: 30px;
+        }
+        .step-number {
+            position: absolute;
+            left: 50%;
+            top: -33px;
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            border-radius: 100px;
+            border: 8px solid #fff;
+            font: 3.75rem/85px 'robotoblack';
+            color: #2c3e50;
+            background: #cedae1;
+        }
+        .step-content {
+            height: 160px;
+            padding: 0;
+            overflow: hidden;
+            @include respond-to-min($desktopSize) {
+            }
+            @include respond-to-min($laptopSize) {
+                padding: 0 40px;
+            }
+            h3  {
+                color: #2c3e50;
+                padding:10px 0;
+                margin: 0;
+                @include respond-to-min($desktopSize) {
+                    padding: 25px 0;
+                    font: 1.625rem/1 'robotomedium';
+                }
+                @include respond-to-min($laptopSize) {
+                    padding: 25px 0;
+                    font: 1.625rem/1 'robotomedium';
+                }
+            }
+            p {
+                font: 0.875rem/1.5rem 'robotoregular';
+                color: #a1b1bc;
+                margin: 0;
+            }
+        }
+    }
+    .careers-apply-step > div.col-sm-4:last-child {
+        .careers-step-detail {
+            margin-bottom: 0;
+        }
+    }
+    .view-jobs-opening {
+        margin-top: 75px;
+        color: #fff;
+        p {
+            margin: 30px 0;
+            text-align: center;
+            font-family: 'robotolight';
+            strong {
+                font-family: 'robotobold';
+            }
+            @include respond-to-min($tabletSize) {
+                height: 55px;
+                line-height: rem(55px);
+                margin:  0;
+                text-align: left;
+                letter-spacing: 0.5px;
+            }
+
+            @include respond-to-min($desktopSize) {
+                height: 55px;
+                margin:  0;
+                text-align: left;
+            }
+
+            @include respond-to-min($laptopSize) {
+                height: 55px;
+                font: 1.875rem/55px 'robotolight';
+                margin:  0;
+                letter-spacing: -1px;
+                text-align: left;
+            }
+        }
+        a.view-more-jobs {
+            height: 55px;
+            padding: 0 25px;
+            line-height: rem(55px);
+            border: 2px solid #77818b;
+            display: block;
+            width: 200px;
+            font-family: 'robotoregular';
+            vertical-align: middle;
+            color: #fff;
+            margin-left: auto;
+            margin-right: auto;
+            float: none !important;
+            &:hover {
+                text-decoration: none;
+            }
+            &.clear::after, &.clear {
+                clear: both;
+            }
+            @include respond-to-min($tabletSize) {
+                float: none;
+            }
+
+            @include respond-to-min($desktopSize) {
+                float: right !important;
+                display: inline-block;
+                width: auto;
+            }
+            @include respond-to-min($laptopSize) {
+                font-size: 1.875rem;
+                float: right !important;
+                display: inline-block;
+                width: auto;
+            }
+        }
+    }
+}
+.careers-benefit-row {
+    .no-gutter {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .careers-benefit {
+        border-bottom: 1px solid #f0f1f3;
+        margin-bottom: 60px;
+        &.no-border-left {
+            border-left: 0;
+        }
+        .benefit-thumbnail {
+            height: auto;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            @include respond-to-min($desktopSize) {
+                height: 255px;
+            }
+            @include respond-to-min($laptopSize) {
+                height: 320px;
+            }
+            @include respond-to-min($tabletSize) {
+                height: 255px;
+            }
+        }
+        .benefit-name {
+            font: rem(20px) 'robotomedium';
+            color: #2c3e50;
+            margin: 0;
+        }
+        .benefit-content {
+            padding: 25px 30px;
+            height: 120px;
+            border-left: 1px solid #f0f1f3;
+            p {
+                font-size: rem(16px);
+                line-height: rem(24px);
+                font-family: 'robotolight';
+                color: #595a5a;
+                margin: 0;
+            }
+            &:nth-child(2n) {
+                border-left: 0;
+            }
+            @include respond-to-min($desktopSize) {
+                &:nth-child(3n) {
+                    border-left: 1px solid #f0f1f3;
+                }
+            }
+            @include respond-to-min($laptopSize) {
+                &:nth-child(4n) {
+                    border-left: 1px solid #f0f1f3;
+                }
+            }
+            @include respond-to-min($tabletSize) {
+                &:nth-child(2n) {
+                    border-left: 1px solid #f0f1f3;
+                }
+            }
+        }
+    }
+}
+
+.section-job-opening{
+    @extend .section-our-values;
+    .our-values-container{
+          .our-value-item {
+            padding:5px;
+            position:relative;
+            overflow:hidden;
+            padding:5px;
+            min-height: 0;
+            cursor: pointer;
+            .job-details {
+                min-height: 155px;
+                position: relative;
+                border-left: 10px solid #e1e4e7;
+                padding: 25px 15px;
+                .job-thumbnail {
+                    float: none;
+                    padding: 30px 0;
+                    overflow: hidden;
+                    opacity: 1;
+                    img {
+                        display: block;
+                        margin: auto;
+                        max-width: 135px;
+                        height: auto;
+                    }
+                }
+                .value-description {
+                    font-size: rem(18px);
+                    line-height: rem(25px);
+                    color:#595a5a;
+                    font-family: 'robotolight';
+                    h3{
+                        font-family:"robotobold";
+                        font-size: rem(24px);
+                        padding: 0;
+                        margin-bottom: 10px;
+                        span{
+                            font-family:"robotothin";
+                        }
+                    }
+                }
+            }
+            .arrowGoToDetail{
+                position:absolute;
+                width:25px;
+                height:27px;
+                margin-top: -13px;     
+                top:50%;
+                right:40px;
+                a {
+                    height: 100%;
+                    display: block;
+                    background: url('/img/iconArrowJobOpening_.png') no-repeat 0 0;
+                    &:hover {
+                        background-position: 0 -27px;
+                    }
+                }
+            }
+
+            @include respond-to-min($desktopSize) {
+                .job-descriptions {
+                    padding: 0 40px 0 0;
+                }
+                .job-details {
+                    padding: 25px 40px 25px 0;
+                    .job-thumbnail {
+                        width: 135px;
+                        float: left;
+                        padding: 0;
+                    }
+                }
+            }
+            @include respond-to-min($laptopSize) {
+                .job-descriptions {
+                    padding: 0 40px 0 0;
+                }
+                .job-details {
+                    padding: 25px 40px 25px 0;
+                    .job-thumbnail {
+                        width: 135px;
+                        float: left;
+                        padding: 0;
+                    }
+                }
+            }
+            @include respond-to-min($tabletSize) {
+                .job-descriptions {
+                    padding: 0 40px 0 0;
+                }
+                .job-details {
+                    padding: 25px 40px 25px 0;
+                    .job-thumbnail {
+                        width: 135px;
+                        float: left;
+                        padding: 0;
+                    }
+                }
+            }
+            &:hover{
+                .job-details {
+                    border-left: 10px solid #facd20;
+                }
+                .arrowGoToDetail {
+                    a {
+                        background-position: 0 -27px;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+
+    .job-description{
+        font-family:'robotolight';
+        color:#fff;
+        padding:30px 0 60px;
+
+        @include respond-to-min($tabletSize) {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+        }
+
+        @include respond-to-min($desktopSize) {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+        }
+
+        @include respond-to-min($laptopSize) {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+        }
+
+        @include respond-to-min($bigScreen) {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+        }
+    }
+}

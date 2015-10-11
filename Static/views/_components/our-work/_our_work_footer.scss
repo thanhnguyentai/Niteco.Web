@@ -1,0 +1,11 @@
+
+.our-works-footer__item{
+    width:100%;
+    height: 100%;
+    position: relative;
+    float: left;
+    background: #282828;
+    @include respond-to-min($tabletSize) {
+        width: 50%;
+    }
+}
