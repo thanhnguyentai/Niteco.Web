@@ -87,8 +87,8 @@ Niteco.Web/appData/Index/*
 Niteco.Web/License.config
 Niteco.Web/[Bb]in/
 Niteco.Web/obj/*
-Niteco.Web/bin/*
-Niteco.Web/Bin/*
+bin/*
+Bin/*
 
 Niteco.Search/[Bb]in/
 Niteco.Search/[Oo]bj/
@@ -128,3 +128,5 @@ fonts/
 img/
 validation-status.json
 Static/styles/_normalize.scss
+Niteco FrontEnd.csproj
+Niteco FrontEnd.sln
