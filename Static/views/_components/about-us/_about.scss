@@ -498,13 +498,13 @@
 				margin: 0;
 
 				@include respond-to-min($tabletSize) {
-					font-size: 1.2rem;
-					line-height: 1rem;
+					font-size: rem(35px);
+					line-height: rem(40px);
 				}
 
 				@include respond-to-min($desktopSize) {
-					font-size: 1.2rem;
-					line-height: 1rem;
+					font-size: rem(35px);
+					line-height: rem(40px);
 				}
 
 				@include respond-to-min($laptopSize) {
@@ -516,10 +516,6 @@
 					font-size: 3.5rem;
 					line-height: 3rem;
 				}
-			}
-
-			.header-underline {
-				padding-bottom: 50px;
 			}
 		}
 
@@ -533,20 +529,24 @@
 			.value-index {
 				font-family: 'robotoblack';
 				color: #cedae1;
-				padding: 0 0 25px;
+				font-size: rem(30px);
+				line-height: rem(30px);
 				margin: 0;
-				width: 90px;
-				margin-right: 45px;
+				padding: 0;
 				float: left;
+				width: 100%;
 
 				@include respond-to-min($tabletSize) {
+					width: 90px;
+					padding: 0 0 25px;
+
 					font-size: 5rem;
 					line-height: 5rem;
 				}
 
 				@include respond-to-min($desktopSize) {
-					font-size: 1.2rem;
-					line-height: 1rem;
+					font-size: 7rem;
+					line-height: 7rem;
 				}
 
 				@include respond-to-min($laptopSize) {
@@ -565,16 +565,19 @@
 				font-family: 'robotothin';
 
 				@include respond-to-min($tabletSize) {
+					padding: 0 0 0 90px;
 					font-size: 1.5rem;
 					line-height: 1.875rem;
 				}
 
 				@include respond-to-min($desktopSize) {
+					padding: 0 0 0 100px;
 					font-size: 1.5rem;
 					line-height: 1.875rem;
 				}
 
 				@include respond-to-min($laptopSize) {
+					padding: 0 0 0 135px;
 					font-size: 1.5rem;
 					line-height: 1.875rem;
 				}
