@@ -48,7 +48,6 @@ body {
 .content-wrapper {
     position: relative;
     transition: all 300ms ease-in-out;
-    height: 100%;
 
     &.show-menu {
         transform: translate(-300px,0);
