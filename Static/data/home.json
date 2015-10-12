@@ -4,7 +4,7 @@
         "smallText": "Grow your career",
         "largeText": "Join our team",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "#"
+        "url": "/Static/compiled/pages/careers.html"
     },
     "letWorkTogether": {
         "background": "",
@@ -18,35 +18,35 @@
         "smallText": "Our",
         "largeText": "Services",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "#"
+        "url": "/Static/compiled/pages/services.html"
     },
     "work": {
         "background": "/img/how-we-work.jpg",
         "smallText": "How we",
         "largeText": "Work",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "/Static/compiled/pages/our-works.html"
+        "url": "/Static/compiled/pages/how-we-work.html"
     },
     "projects": {
         "background": "/img/featured-projects.jpg",
         "smallText": "Featured",
         "largeText": "Projects",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "#"
+        "url": "/Static/compiled/pages/our-works.html"
     },
     "team": {
         "background": "/img/our-team.jpg",
         "smallText": "Our",
         "largeText": "Team",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "#"
+        "url": "/Static/compiled/pages/our-team.html"
     },
     "contactUs": {
         "background": "/img/contact.jpg",
         "smallText": "Get in touch",
         "largeText": "Contact us",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "#"
+        "url": "/Static/compiled/pages/contact-us.html"
     },
     "facebook": {
         "background": "/img/fb.jpg",

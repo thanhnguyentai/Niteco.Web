@@ -1,0 +1,20 @@
+﻿{
+    "careers_job_opening_view_more": {
+        "hightlight_text": "Looking for a career?",
+        "normal_text": "Let’s see how we can help you grow",
+        "button_text": "View job openings",
+        "button_url": "#"
+    },
+    "careers_view_more_contact_us": {
+        "hightlight_text": "Don’t see the position you’re looking for?",
+        "normal_text": "Tell us more",
+        "button_text": "Contact Us",
+        "button_url": "#"
+    },
+    "how_we_work_view_more": {
+        "hightlight_text": "Let us know what you need,",
+        "normal_text": "so we can ensure maximum productivity!",
+        "button_text": "Contact Us",
+        "button_url": "#"
+    }
+}

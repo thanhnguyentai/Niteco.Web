@@ -107,3 +107,13 @@
         color: #fff;
     }
 }
+.btn-black{
+    @extend %button;
+    background: #3f474e;
+    color: #fff;
+    border: 2px solid #6d7177;
+    border-radius: 5px;
+    padding: 15px 50px;
+    font-size: rem(15px);
+    float: right;
+}

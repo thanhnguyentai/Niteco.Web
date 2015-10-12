@@ -2,7 +2,7 @@
     'use strict';
 
 
-    var $items, $overlay, $close,
+    var $items, $overlay,$contentLoading, $close,
         // transition end event name
 
             // window and body elements
@@ -27,7 +27,7 @@
             var $item = $(this);
             $overlay = $(".project-modal");
             $close = $overlay.find('span.rb-close');
-
+            $contentLoading = $overlay.find('.project-loading-content');
             $item.find('a').on('click', function (e) {
                 e.preventDefault();
                 showModel($item);
@@ -75,6 +75,14 @@
             $overlay.css({ overflow: 'hidden' });
             $close.css({ opacity: 1 });
             bindEscapeKey();
+            
+
+            $.ajax({
+                url: "/Static/compiled/pages/case-study-detail.html"
+            }).done(function (data) {
+                $contentLoading.html(data);
+            });
+
         });
     };
 
@@ -130,6 +138,10 @@
         projectModal += "        <div class=\"project-preview\">";
         projectModal += "       <\/div>";
         projectModal += "        <div class=\"project-loading-content\">";
+        projectModal += "           <div class=\"loading-container-2\">";
+        projectModal += "               <div class=\"loading\"></div>";
+        projectModal += "               <div id=\"loading-text\">loading</div>";
+        projectModal += "           </div>";
         projectModal += "       <\/div>";
         projectModal += "   <\/div>";
         return projectModal;

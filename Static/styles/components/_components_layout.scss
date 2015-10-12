@@ -2,8 +2,6 @@ html, body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    width: 100%;
-    height: 100%;
 }
 
 body {
@@ -11,17 +9,11 @@ body {
 }
 
 .page-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
     backface-visibility: hidden;
     background: #282828;
 }
 
 .content-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
     transition: all 500ms ease;
 
     &.loading {
@@ -109,3 +101,143 @@ body {
     position: relative;
     z-index: 1;
 }
+.popular-container{
+    padding: 110px 0;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+/*-- header title section --*/
+.header-title-section {
+    font-family: 'robotobold';
+    color: #fff;
+    margin: 0;
+
+    @include respond-to-min($tabletSize) {
+        font-size: rem(35px);
+        line-height: rem(40px);
+    }
+
+    @include respond-to-min($desktopSize) {
+        font-size: rem(35px);
+        line-height: rem(40px);
+    }
+
+    @include respond-to-min($laptopSize) {
+        font-size: rem(56px);
+        line-height: rem(60px);
+    }
+}
+
+/*
+  @keyframes rotate-loading {
+            0%  {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        @-moz-keyframes rotate-loading {
+            0%  {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        @-webkit-keyframes rotate-loading {
+            0%  {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        @-o-keyframes rotate-loading {
+            0%  {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        @keyframes rotate-loading {
+            0%  {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        @-moz-keyframes rotate-loading {
+            0%  {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        @-webkit-keyframes rotate-loading {
+            0%  {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        @-o-keyframes rotate-loading {
+            0%  {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        @keyframes loading-text-opacity {
+            0%  {opacity: 0}
+            20% {opacity: 0}
+            50% {opacity: 1}
+            100%{opacity: 0}
+        }
+
+        @-moz-keyframes loading-text-opacity {
+            0%  {opacity: 0}
+            20% {opacity: 0}
+            50% {opacity: 1}
+            100%{opacity: 0}
+        }
+
+        @-webkit-keyframes loading-text-opacity {
+            0%  {opacity: 0}
+            20% {opacity: 0}
+            50% {opacity: 1}
+            100%{opacity: 0}
+        }
+
+        @-o-keyframes loading-text-opacity {
+            0%  {opacity: 0}
+            20% {opacity: 0}
+            50% {opacity: 1}
+            100%{opacity: 0}
+        }
+        .loading-container-2,.loading {
+            height: 100px;
+            position: relative;
+            width: 100px;
+            border-radius: 100%;
+        }
+
+
+        .loading-container-2 { margin: 40px auto }
+
+        .loading {
+            border: 2px solid transparent;
+            border-color: transparent #000 transparent #000;          
+            animation: rotate-loading 1.5s linear 0s infinite normal;
+            transform-origin: 50% 50%;
+        }
+
+        .loading-container-2:hover .loading {
+            border-color: transparent #E45635 transparent #E45635;
+        }
+        .loading-container-2:hover .loading,
+        .loading-container-2 .loading {
+      
+            transition: all 0.5s ease-in-out;
+        }
+
+        #loading-text {
+         
+            animation: loading-text-opacity 2s linear 0s infinite normal;
+            color: #000;
+            font-family: "Helvetica Neue, "Helvetica", ""arial";
+            font-size: 10px;
+            font-weight: bold;
+            margin-top: 45px;
+            opacity: 0;
+            position: absolute;
+            text-align: center;
+            text-transform: uppercase;
+            top: 0;
+            width: 100px;
+        }
+
+    */

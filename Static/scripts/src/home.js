@@ -1,4 +1,4 @@
-﻿define(['jquery', 'underscore', 'videojs', 'base/request-page', 'base/top-navigator', 'lib/jquery.nanoscroller'], function ($, _, videojs, requestPage, topNavigator, nanoScroll) {
+﻿define(['jquery', 'underscore', 'videojs', 'base/request-page', 'base/top-navigator'], function ($, _, videojs, requestPage, topNavigator) {
 
     'use strict';
 

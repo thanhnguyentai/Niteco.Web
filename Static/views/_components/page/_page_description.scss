@@ -1,6 +1,6 @@
 ﻿.page-description__title-container {
     text-align: center;
-    padding: rem(140px) 0 rem(120px) 0;
+    padding: 110px 0;
     position: relative;
     z-index: 1;
     background: #fff;
@@ -15,12 +15,12 @@
     padding: 1rem 0 0.5rem;
 
     @include respond-to-min($tabletSize) {
-        font-size: 2.1rem;
-        padding: 2rem 0 1rem;
+        font-size: rem(36px);
+        padding: 1rem 0 1rem;
     }
 
     @include respond-to-min($desktopSize) {
-        font-size: 2.1rem;
+        font-size: rem(36px);
     }
 
     @include respond-to-min($laptopSize) {
@@ -36,11 +36,11 @@
     margin: 0;
 
     @include respond-to-min($tabletSize) {
-        font-size: 1.6rem;
+        font-size: rem(24px);
     }
 
     @include respond-to-min($desktopSize) {
-        font-size: 1.6rem;
+        font-size: rem(24px);
     }
 
     @include respond-to-min($laptopSize) {

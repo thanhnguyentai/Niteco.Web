@@ -7,6 +7,12 @@
     "description": {
         "title": "Your business is one-of-a-kind",
         "subTitle": "Your Software Strategies Should Be Too",
-        "description":  "Customized, tailored, unique technology services is exactly what the global team of experts at Niteco strives for. Our clients range from rising mobile app makers, to award-winning wineries, to market-leading newspapers."
+        "description": "Customized, tailored, unique technology services is exactly what the global team of experts at Niteco strives for. Our clients range from rising mobile app makers, to award-winning wineries, to market-leading newspapers."
+    },
+
+    "socially": { 
+        "title": "Socially Responsible",
+        "subTitle": "Environmentally Aware",
+        "description": "Our Scandinavian roots call out for us to hold responsibilities with the society and the environment. Our power to bring sustainability to people and communities motivates us to do even better."
     }
 }

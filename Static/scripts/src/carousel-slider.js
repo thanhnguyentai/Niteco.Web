@@ -3,8 +3,8 @@
     'use strict';
 
     function CarouselSlider(container) {
-        if (container.find('.testimonial-carousel-container').children().length >= 2) {
-            container.find('.testimonial-carousel-container').addClass('owl-carousel').owlCarousel({
+        if (container.children().children().length >= 2) {
+            container.children().addClass('owl-carousel').owlCarousel({
                 items: 1,
                 smartSpeed: 500,
                 loop: true,

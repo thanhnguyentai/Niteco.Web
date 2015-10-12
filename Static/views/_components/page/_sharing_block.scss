@@ -1,0 +1,60 @@
+﻿.sharing-block {
+    h4 {
+        font-family: 'robotolight';
+        font-size: rem(18px);
+        color: #282828;
+        margin-bottom: 25px;
+    }
+    .social_button {
+        display: block;
+        height: 59px;
+        background-size: cover;
+        max-width: 280px;
+        margin: 15px;
+        &.fa-button {
+            background: url('/img/fb-button.png') no-repeat;
+        }
+        &.tw-button {
+            background: url('/img/tw-button.png') no-repeat;
+        }
+        &.linkedin-button {
+            background: url('/img/linkedin-button.png') no-repeat;
+        }
+        &.email-button {
+            background: url('/img/email-button.png') no-repeat;
+        }
+    }
+    @include respond-to-min($tabletSize) {
+        .social_button {
+            max-width: 280px;
+            background-size: 100%;
+        }
+    }
+
+    @include respond-to-min($desktopSize) {
+        .haft-gutter {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+        .social_button {
+            max-width: 280px;
+            background-size: 100% !important;
+        }
+        h4 {
+            font-size: rem(30px);
+        }
+    }
+
+    @include respond-to-min($laptopSize) {
+        .haft-gutter {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+        .social_button {
+            width: 280px;
+        }
+        h4 {
+            font-size: rem(30px);
+        }
+    }
+}

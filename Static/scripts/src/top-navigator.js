@@ -21,12 +21,15 @@
             selectMenu(href);
         });
 
-        var scrollTopToDisplay = $(window).height() * 90 / 100;
+        var scrollTopToDisplay = $(window).height() * 70 / 100;
         var absolutePosition = 'absolute';
         var fixedPosition = "fixed";
         var currentPosition = absolutePosition;
-        
-        pageScroll.addCallback(function (scrollTop) {
+
+        var callbackScroll = _.debounce(function (scrollTop) {
+            if (scrollTop > scrollTopToDisplay && currentPosition == fixedPosition)
+                return;
+
             if (scrollTop > scrollTopToDisplay && currentPosition == absolutePosition) {
                 currentPosition = fixedPosition;
                 menuContainer.css({
@@ -38,7 +41,7 @@
                 animate(menuContainer, { top: 0, duration: 500 });
             } else if (scrollTop <= scrollTopToDisplay && currentPosition == fixedPosition) {
                 currentPosition = absolutePosition;
-                animate(menuContainer, { top: -menuContainer.height() + 'px', duration: 500 }).then(function() {
+                animate(menuContainer, { top: -menuContainer.height() + 'px', duration: 500 }).then(function () {
                     menuContainer.css({
                         'position': 'absolute',
                         'top': '0'
@@ -46,6 +49,10 @@
                     menuContainer.removeClass('scroll-menu');
                 });
             }
+        }, 10);
+
+        pageScroll.addCallback(function (scrollTop) {
+            callbackScroll(scrollTop);
         });
     }
     

@@ -1,39 +1,3 @@
-.testimonial-panel {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-
-    @include respond-to-min($tabletSize) {
-        min-height: 600px;
-    }
-
-    .panel-bg {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        bottom: 0px;
-        width: 100%;
-        z-index: 0;
-        background-size: cover;
-    }
-
-    .panel-content {
-        position: relative;
-        z-index: 10;
-        width: 100%;
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    .panel-logo {
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        z-index: 100;
-    }
-}
 
 .owl-carousel .owl-item .testimonial-panel img {
     width: auto;
@@ -41,355 +5,156 @@
     max-width: 150px;
 }
 
-.main {
-    display: table;
-    height: 100%;
-    position: absolute;
-    width: 100%;
+.testimonial-container__header {
+    text-align: center;
 
-    .content {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
+    .header-title-section {
+        color: #282828;
+    }
 
-        h1 {
-            font-family: robotoblack;
-            font-size: 1.5rem;
-            margin-top: 0;
+    .yellow-divider {
+        margin: 30px 0;
+    }
 
-            @include respond-to-min($tabletSize) {
-                font-size: 36px;
-            }
+    .img__quote {
+        background: url("/img/quote.jpg") no-repeat center center;
+        background-size: auto 100%;
+        margin: 10px auto 20px;
+        width: 39px;
+        height: 30px;
 
-            @include respond-to-min($desktopSize) {
-                font-size: 46px;
-            }
-
-            @include respond-to-min($laptopSize) {
-                font-size: 56px;
-            }
+        @include respond-to-min($tabletSize) {
+            margin: 20px auto 40px;
+            width: 78px;
+            height: 59px;
         }
 
-        .underline__border {
-            height: 3px;
-            width: 5rem;
-            margin: 0 auto;
-            background-color: #facd20;
-
-            @include respond-to-min($tabletSize) {
-                height: 5px;
-            }
-
-            @include respond-to-min($laptopSize) {
-                margin-top: -30px;
-            }
-        }
-
-        .img__quote {
-            background: url("/img/quote.jpg") no-repeat center center;
-            background-size: auto 100%;
-            margin: 20px auto;
-            width: 39px;
-            height: 30px;
-
-            @include respond-to-min($tabletSize) {
-                margin: 30px auto;
-                width: 78px;
-                height: 59px;
-            }
-            @include respond-to-min($bigScreen) {
-                margin: 60px auto;
-            }
-        }
-
-        .quote__text {
-            margin: 0 10%;
-            font-family: robotolight;
-            font-style: italic;
-            font-size: 12px;
-
-            @include respond-to-min($tabletSize) {
-                margin: 0 15% 85px;
-                font-size: 16px;
-            }
-
-            @include respond-to-min($desktopSize) {
-                margin: 0 20% 85px;
-                font-size: 20px;
-            }
-
-            @include respond-to-min($laptopSize) {
-                margin: 0 25% 85px;
-                font-size: 24px;
-            }
-        }
-
-        .quote__about {
-            font-family: robotoregular;
-
-            span {
-                color: #a1b1bc;
-                font-size: 0.6rem;
-
-                @include respond-to-min($tabletSize) {
-                    font-size: 1rem;
-                }
-            }
-        }
-
-        .quote__about > p {
-            font-size: 1rem;
-            padding: 0 0;
-            margin-bottom: 1px;
-
-            @include respond-to-min($tabletSize) {
-                font-size: 1.5rem;
-            }
+        @include respond-to-min($bigScreen) {
+            margin: 20px auto 40px;
         }
     }
 }
 
 .testimonial-container {
-    display: block;
-    position: relative;
-    height: 100%;
-}
+    background-size: cover;
 
-.testimonial-carousel-container {
-    position: relative;
-    z-index: 0;
-    height: 100%;
+    .testimonial-carousel-container {
+        position: relative;
 
-    .owl-stage-outer {
-        height: 100%;
-
-        .owl-stage {
-            height: 100%;
-        }
-
-        .owl-item {
-            height: 100%;
-        }
-    }
-
-    .owl-prev {
-        position: absolute;
-        color: transparent;
-        width: 20px;
-        height: 36px;
-        top: 50%;
-        left: 10px;
-        margin-top: -18px;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        background: url('/img/arrow_left_carousel.png') no-repeat center center;
-        background-size: auto 100%;
-
-        @include respond-to-min($tabletSize) {
-            left: 30px;
-        }
-
-        @include respond-to-min($desktopSize) {
-            left: 70px;
-            width: 31px;
-            height: 57px;
-            margin-top: -28px;
-        }
-
-        &:hover {
-            background: url('/img/arrow_left_carousel_active.png') no-repeat center center;
+        .owl-prev {
+            position: absolute;
+            color: transparent;
+            width: 20px;
+            height: 36px;
+            top: 50%;
+            left: 10px;
+            margin-top: -18px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background: url('/img/arrow_left_carousel.png') no-repeat center center;
             background-size: auto 100%;
-        }
-    }
-
-    .owl-next {
-        position: absolute;
-        color: transparent;
-        width: 20px;
-        height: 36px;
-        top: 50%;
-        margin-top: -18px;
-        right: 10px;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        background: url('/img/arrow_right_carousel.png') no-repeat center center;
-        background-size: auto 100%;
-
-        @include respond-to-min($tabletSize) {
-            right: 30px;
-        }
-
-        @include respond-to-min($desktopSize) {
-            right: 80px;
-            width: 31px;
-            height: 57px;
-            margin-top: -28px;
-        }
-
-        &:hover {
-            background: url('/img/arrow_right_carousel_active.png') no-repeat center center;
-            background-size: auto 100%;
-        }
-    }
-}
-
-.testimonial-arrow-left {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 50%;
-    z-index: 10;
-    cursor: url("/img/arrow-left.png"), auto;
-}
-
-.testimonial-arrow-right {
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    bottom: 0px;
-    right: 0;
-    z-index: 10;
-    cursor: url("/img/arrow-right.png"), auto;
-}
-
-.testimonial-item-container {
-    top: 50%;
-    -ms-transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    position: absolute;
-
-    .testimonial-header {
-        margin-bottom: 30px;
-
-        h1 {
-            margin: 0;
-            padding: 0;
-            font: 2rem robotoblack;
 
             @include respond-to-min($tabletSize) {
-                font: 3rem robotoblack;
+                left: 30px;
             }
 
             @include respond-to-min($desktopSize) {
-                font: 4rem robotoblack;
+                left: 70px;
+                width: 31px;
+                height: 57px;
+                margin-top: -28px;
             }
 
-            @include respond-to-min($laptopSize) {
-                font: 3.204rem robotoblack;
-            }
-
-            @include respond-to-min($bigScreen) {
-                font: 4.5rem robotoblack;
+            &:hover {
+                background: url('/img/arrow_left_carousel_active.png') no-repeat center center;
+                background-size: auto 100%;
             }
         }
-    }
 
-    .testimonial-header-our {
-        margin-bottom: 30px;
-
-        h2 {
-            margin: 0;
-            padding: 0;
-            font: 1.5rem robotolight;
+        .owl-next {
+            position: absolute;
+            color: transparent;
+            width: 20px;
+            height: 36px;
+            top: 50%;
+            margin-top: -18px;
+            right: 10px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background: url('/img/arrow_right_carousel.png') no-repeat center center;
+            background-size: auto 100%;
 
             @include respond-to-min($tabletSize) {
-                font: 1.1rem robotolight;
+                right: 30px;
             }
 
             @include respond-to-min($desktopSize) {
-                font: 1.3rem robotolight;
+                right: 80px;
+                width: 31px;
+                height: 57px;
+                margin-top: -28px;
             }
 
-            @include respond-to-min($laptopSize) {
-                font: 1.5rem robotolight;
-            }
-
-            @include respond-to-min($bigScreen) {
-                font: 1.5rem robotolight;
+            &:hover {
+                background: url('/img/arrow_right_carousel_active.png') no-repeat center center;
+                background-size: auto 100%;
             }
         }
-    }
 
-    .testimonial-header-underline {
-        width: 100%;
-        height: 5px;
+        .testimonial-panel {
+            overflow: hidden;
+            text-align: center;
 
-        .testimonial-header-underline-content {
-            background-color: red;
-            width: 149px;
-            height: 5px;
-            display: inline-block;
-            vertical-align: top;
-        }
-    }
+            .quote__text {
+                margin: 0 10%;
+                font-family: robotolight;
+                font-style: italic;
+                font-size: 12px;
 
-    .testimonial-des {
-        margin: 0 0 60px;
-        padding: 0 50px 0 0;
+                @include respond-to-min($tabletSize) {
+                    margin: 0 15% 85px;
+                    font-size: 16px;
+                }
 
-        @include respond-to-min($tabletSize) {
-            font: 1rem robotolight;
-        }
+                @include respond-to-min($desktopSize) {
+                    margin: 0 20% 85px;
+                    font-size: 20px;
+                }
 
-        @include respond-to-min($desktopSize) {
-            font: 1rem robotolight;
-        }
+                @include respond-to-min($laptopSize) {
+                    margin: 0 25% 85px;
+                    font-size: 24px;
+                }
+            }
 
-        @include respond-to-min($laptopSize) {
-            font: 1.12rem robotolight;
-        }
+            .quote__about {
+                font-family: robotoregular;
 
-        @include respond-to-min($bigScreen) {
-            font: 1.2rem robotolight;
-        }
-    }
+                span {
+                    color: #a1b1bc;
+                    font-size: 0.6rem;
 
-    .testimonial-left {
-        left: 0;
+                    @include respond-to-min($tabletSize) {
+                        font-size: 1rem;
+                    }
+                }
+            }
 
-        @include respond-to-min($tabletSize) {
-            left: 200px;
-        }
+            .quote__about > p {
+                font-size: 1rem;
+                padding: 0 0;
+                margin-bottom: 1px;
 
-        @include respond-to-min($desktopSize) {
-            left: 500px;
-        }
-
-        @include respond-to-min($laptopSize) {
-            left: -50px;
-        }
-
-        @include respond-to-min($bigScreen) {
-            left: -100px;
-        }
-    }
-
-    .testimonial-right {
-        right: 0;
-
-        @include respond-to-min($tabletSize) {
-            right: -50px;
-        }
-
-        @include respond-to-min($desktopSize) {
-            left: 200px;
-        }
-
-        @include respond-to-min($laptopSize) {
-            left: 100px;
-        }
-
-        @include respond-to-min($bigScreen) {
-            left: 50px;
+                @include respond-to-min($tabletSize) {
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 }
