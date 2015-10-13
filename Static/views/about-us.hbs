@@ -5,7 +5,7 @@ title: "About us page"
 {{> top_navigator }}
 
 <div class="page-wrapper">
-    <section class="about-container content-container">
+    <div class="about-container content-container" data-require="base/about-us-page">
         <div class="about-content-wrapper content-wrapper">
             {{> _page-introduction about_us.introduction}}
 
@@ -16,14 +16,16 @@ title: "About us page"
             {{> about-certified}}
 
             {{> about-offices}}
-            
+
             {{> our-vision-mission }}
-            
+
             {{> our-values }}
-            
+
             {{> about-socially}}
-            
+
             {{> about-community}}
+
+            {{> _footer}}
         </div>
-    </section>
+    </div>
 </div>

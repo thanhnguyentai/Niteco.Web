@@ -1,4 +1,6 @@
-
+.record-number{
+    background-image:url('/img/about-us-business-bottom-background.jpg');
+}
 .about-group__content-container {
     background-color: #fff;
     background-size: cover;
@@ -6,7 +8,7 @@
     padding: 110px 0 110px;
     position: relative;
     z-index: 1;
-
+    transition-delay: 0.5s;
     .about-us-info {
         background: #fff;
         text-align: center;
@@ -114,6 +116,7 @@
             color: #9ca5ae;
             font-size: rem(200px);
             line-height: 200px;
+            display:block;
 
             @include respond-to-min($tabletSize) {
                 font-size: rem(240px);
@@ -156,6 +159,7 @@
     &.about-offices-block__container {
         background-color: #282828;
         text-align: center;
+        
     }
 
     .yellow-divider {
@@ -230,7 +234,7 @@
         line-height: 28px;
         font-size: rem(20px);
         padding: 20px 0;
-
+        transition-delay: 1.5s;
         @include respond-to-min($tabletSize) {
             line-height: 40px;
             font-size: rem(28px);
@@ -369,6 +373,8 @@
     background-size: cover;
     text-align: center;
 
+
+
     .our-values-container {
         margin: 0 auto;
         text-align: left;
@@ -409,6 +415,14 @@
             background: #fff;
             padding: 35px 40px;
             margin-bottom: 40px;
+
+            &{
+                @for $i from 1 through 5{
+                    &:nth-child(#{$i}){
+                        transition-delay: 200ms * $i;
+                    }
+                }
+            }
 
             .value-index {
                 font-family: 'robotoblack';
@@ -552,6 +566,7 @@
                 width: 100%;
                 height: 270px;
                 position: relative;
+                transition-delay:1s;
 
                 @include respond-to-min($desktopSize) {
                     height: 250px;
@@ -565,7 +580,7 @@
                     height: 270px;
                     width: 100%;
                     margin: 0 0 5px;
-
+                     transition-delay:1s;
                     @include respond-to-min($desktopSize) {
                         height: 250px;
                     }

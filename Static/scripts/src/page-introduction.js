@@ -22,12 +22,16 @@
             if (!container.hasClass('loaded')) {
                 container.addClass('loaded');
             }
+            if (scrollTop <= 20) {
+                container.removeClass('loaded');
+            }
+
             background.css('top', (-scrollTop / 2) + 'px');
             content.css({
                 'margin-top': (-scrollTop / 2) + 'px',
                 'opacity': (1 - scrollTop * 1.5 / contentHeight)
             });
-        }, 10);
+        }, 0);
 
         pageScroll.addCallback(callbackScroll);
 

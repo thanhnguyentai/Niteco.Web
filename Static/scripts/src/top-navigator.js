@@ -64,17 +64,23 @@
         isMenuShowed = !isMenuShowed;
         
         $(this).parents('body').find('.content-wrapper').toggleClass('show-menu');
-        $(this).parents('.top-navigator-container').one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
+
+        var callbackEnTransition = _.debounce(function () {
             if (isMenuShowed && callbackSearch) {
-                var timeout = setTimeout(function() {
+                var timeout = setTimeout(function () {
                     clearTimeout(timeout);
                     callbackSearch(isMenuShowed);
                     enableToggleMenu = true;
-                }, 200);
+                }, 250);
             } else {
                 enableToggleMenu = true;
             }
+        }, 10);
+        
+        $(this).parents('.top-navigator-container').one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
+            callbackEnTransition();
         });
+        
         $(this).parents('.top-navigator-container').toggleClass('is-active'); 
         $('body').toggleClass('overflow-hidden');
 

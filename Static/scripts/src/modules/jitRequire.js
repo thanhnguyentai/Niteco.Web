@@ -2,8 +2,9 @@ define(['jquery', 'underscore'], function ($, _) {
 
 	'use strict';
 
-	function findModules ($container, opts) {
-
+    var callbackAfterLoaded = null;
+	function findModules ($container, callback) {
+	    callbackAfterLoaded = callback;
 		return $container.find('[data-require]').toArray().map(function(item) {
 		    return initModule($(item));
 		});
@@ -15,6 +16,10 @@ define(['jquery', 'underscore'], function ($, _) {
 			regModule = $el.data('module'),
 	        ref = $el.data('require');
 
+		var resolveDefer = _.debounce(function (module) {
+		    deferred.resolve(module);
+	    }, 100);
+
         try {
 
         	if (regModule) {
@@ -22,12 +27,12 @@ define(['jquery', 'underscore'], function ($, _) {
         	}
         	else {
 
-		        requirejs([ref], function(module) {
+        	    requirejs([ref], function (module) {
 		            module.init($el);
 		            
 		            $el.data('module', module);
-		            deferred.resolve(module);
-		        });
+        	        resolveDefer(module);
+        	    });
         	}
 
         }
@@ -41,7 +46,9 @@ define(['jquery', 'underscore'], function ($, _) {
 	function traceModules (deps) {
 
 		$.when.apply(this, deps).done(function () {
-			console.log('INFO: Modules loaded', Array.prototype.slice.call(arguments));
+		    console.log('INFO: Modules loaded', Array.prototype.slice.call(arguments));
+		    if (callbackAfterLoaded)
+		        callbackAfterLoaded();
 		});
 
 		return deps;

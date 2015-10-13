@@ -7,6 +7,99 @@
     "description": {
         "title": "Meet the nitecans",
         "subTitle": "Diversity is the new hierarchy",
-        "description":  "Our team consists of 180 people from different practices and backgrounds, all with years of experience and certificates of talent. What ties us together, you ask? - The passion we have for our individual works (and the very nurturing HR policies)."
-    }
+        "description": "Our team consists of 180 people from different practices and backgrounds, all with years of experience and certificates of talent. What ties us together, you ask? - The passion we have for our individual works (and the very nurturing HR policies)."
+    },
+
+    "teams": [
+        {
+            "image": "/img/person_pelle_niklasson.jpg",
+            "name": "Pelle Niklasson",
+            "title": "Chief Executive Officer",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_calvin_nguyen.jpg",
+            "name": "Calvin Nguyen",
+            "title": "Chief Operating Officer",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_dao_dinh.jpg",
+            "name": "Dao Dinh",
+            "title": "Head of HR",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_phuong_vu.jpg",
+            "name": "Phuong Vu",
+            "title": "Chief Accountant",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_brendan_millar.jpg",
+            "name": "Brendan Millar",
+            "title": "Product & Marketing Manager",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_fredrik_paulin.jpg",
+            "name": "Fredrik Paulin",
+            "title": "Program Manager",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_hammad_ahmad.jpg",
+            "name": "Hammad Admad",
+            "title": "Program Manager",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_hoang_tran.jpg",
+            "name": "Hoang Tran",
+            "title": "Delivery Service Manager",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_dung_le.jpg",
+            "name": "Dung Le",
+            "title": "Project Manager",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_trung_nguyen.jpg",
+            "name": "Trung Nguyen",
+            "title": "Project Manager",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_tuan_truong.jpg",
+            "name": "Tuan Truong",
+            "title": "Project Manager",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_minh_dinh.jpg",
+            "name": "Minh Dinh",
+            "title": "Project Manager",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_dung_nguyen.jpg",
+            "name": "Dung Nguyen",
+            "title": "Graphic Design Lead",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_dung_nguyen.jpg",
+            "name": "Dung Nguyen",
+            "title": "Graphic Design Lead",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        },
+        {
+            "image": "/img/person_ross_fenner.jpg",
+            "name": "Ross Fenner",
+            "title": "Designer",
+            "description": "Thanks to our consistent growth, we've won our second consecutive Deloitte Fast 50 Central Europe award. This prestigious award is presented annually to top performing technology companies from Central Europe."
+        }
+    ]
 }

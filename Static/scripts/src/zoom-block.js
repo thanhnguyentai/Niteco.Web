@@ -42,8 +42,6 @@
         $close.on('click', function () {
             closeModalDialog();
         });
-
-
     }
     
     function disableScroll() {
@@ -75,14 +73,14 @@
             $overlay.css({ overflow: 'hidden' });
             $close.css({ opacity: 1 });
             bindEscapeKey();
-            
-
             $.ajax({
                 url: "/Static/compiled/pages/case-study-detail.html"
             }).done(function (data) {
                 $contentLoading.html(data);
             });
-
+            $overlay.on('click', function () {
+                closeModalDialog();
+            });
         });
     };
 
@@ -134,10 +132,10 @@
 
     function getHTMLModal() {
         var projectModal = "<div class=\"project-modal js-project-modal\">";
-        projectModal += "<span class=\"rb-close\">close</span>";
+        //projectModal += "<span class=\"rb-close\">close</span>";
         projectModal += "        <div class=\"project-preview\">";
         projectModal += "       <\/div>";
-        projectModal += "        <div class=\"project-loading-content\">";
+        projectModal += "        <div class=\"project-loading-content ajax-content-container\">";
         projectModal += "           <div class=\"loading-container-2\">";
         projectModal += "               <div class=\"loading\"></div>";
         projectModal += "               <div id=\"loading-text\">loading</div>";

@@ -1,6 +1,10 @@
-﻿define(['jquery', 'underscore', 'base/zoom-block'], function ($, _, zoomBlock) {
+﻿define(['jquery', 'underscore', 'base/zoom-block', 'base/page-scroll-animation'], function ($, _, zoomBlock, pageScrollAnimation) {
+    function init(container) {
+        pageScrollAnimation.init(container);
+    }
     return {
-        init: function () {
+        init: function (container) {
+            init(container);
             zoomBlock.init();   
         }
     };

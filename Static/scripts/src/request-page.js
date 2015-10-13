@@ -9,7 +9,7 @@
     var callbackHistory = null;
     var isLoadPageByStateChange = false;
     registerHistory();
-    
+
     function registerHistory() {
         (function (window) {
             History.Adapter.bind(window, 'statechange', function () {
@@ -38,7 +38,7 @@
                         if (!isLoadPageByStateChange) {
                             History.pushState({ state: stateIndex++ }, title, href);
                         }
-                        
+
                         isLoading = false;
                         if (callback)
                             callback(href);
@@ -54,6 +54,10 @@
 
     function showLoading() {
         loading.startLoading();
+        $('body').velocity('scroll', {
+            duration: 250,
+            offset: 0
+        });
     }
 
     function hideLoading(callback) {
@@ -103,20 +107,20 @@
                     }
                 }
 
+
                 var timeout1 = setTimeout(function () {
                     clearTimeout(timeout1);
                     pageWrapper.find('.content-container').removeClass('loading loading-back animating animating-back');
-                    jitRequire.findDeps(pageWrapper);
+                    jitRequire.findDeps(pageWrapper, function () {
+                        var timeout2 = setTimeout(function () {
+                            clearTimeout(timeout2);
+                            $('body').toggleClass('overflow-hidden');
 
-                    var timeout2 = setTimeout(function () {
-                        clearTimeout(timeout2);
-                        $(window).scrollTop(0);
-                        $('body').toggleClass('overflow-hidden');
-
-                        if (callback)
-                            callback(title);
-                    }, 200);
-                }, 0);
+                            if (callback)
+                                callback(title);
+                        }, 500);
+                    });
+                }, 250);
             });
         }, 200);
     }
@@ -132,7 +136,7 @@
         }
         return false;
     }
-    
+
     function loadPageByHref(href, jqueryObj, callback) {
         if (isLoading) {
             return false;
@@ -188,12 +192,12 @@
         registRequestByItems: registRequestByItems,
 
         unregistRequestByItems: unregistRequestByItems,
-        
-        loadPageFromUrl: function(href) {
+
+        loadPageFromUrl: function (href) {
             loadPageByHref(href);
         },
-        
-        registerCallbackHistoryChange: function(callback) {
+
+        registerCallbackHistoryChange: function (callback) {
             callbackHistory = callback;
         }
     };

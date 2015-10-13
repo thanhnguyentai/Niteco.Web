@@ -12,6 +12,10 @@
         height: 700px;
     }
 
+    @include respond-to-min($bigScreen) {
+        height: 855px;
+    }
+
     .page-introduction-top-block {
         display: block;
         position: absolute;

@@ -115,8 +115,9 @@
                 closeSearchBox();
             });
         }, 50);
-        
+
         searchContainer.one('click', function () {
+            searchContainer.find('.seach-box__placeholder').css('display', 'none');
             showSearchPanel();
         });
     }
@@ -126,29 +127,32 @@
     }
 
     function enableSearchBox(isScroll) {
+            
         position = topNavigator.getContainer().find('.top-navigator__search-container').offset();
         size = {
             width: topNavigator.getContainer().find('.top-navigator__search-container').outerWidth(),
             height: topNavigator.getContainer().find('.top-navigator__search-container').outerHeight()
         };
-        
+
         searchContainer.css({
-            top: position.top + 'px',
+            top: position.top - $(window).scrollTop() + 'px',
             width: size.width + 'px',
-            height: size.height + 'px'
+            height: size.height + 'px',
+            right: $(window).width() - position.left - size.width + 'px',
+            display: 'block',
+            opacity: 1
         });
 
-        animate(searchContainer, { right: $(window).width() - position.left - size.width + 'px', duration: 300, easing: 'ease-in-out' }).then(function () {
-            if (!isScroll)
-                registerEventShowSearch();
-        });
+        if (!isScroll)
+            registerEventShowSearch();
     }
 
     function disableSearchBox() {
         searchContainer.css({
-            right: '-100%',
             width: 0,
-            height: 0
+            height: 0,
+            display: 'none',
+            opacity: 0
         });
 
         unregisterEventShowSearch();
@@ -165,7 +169,7 @@
 
             animate(searchContainer, {
                 right: $(window).width() - position.left - size.width + 'px',
-                top: position.top + 'px',
+                top: position.top - $(window).scrollTop() + 'px',
                 width: size.width + 'px',
                 height: size.height + 'px',
 
@@ -173,6 +177,8 @@
             }).then(function () {
                 searchContainer.removeClass('expanding');
                 registerEventShowSearch();
+                searchContainer.find('.seach-box__placeholder').css('display', 'block');
+
                 if (callback)
                     callback();
             });

@@ -1,12 +1,14 @@
 ﻿define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyB__eIsfbtydJhmiQwxQd7w30CgogsLk0k'], function () {
     var initMap = function() {
         //set your google maps parameters
-        var map_zoom = 2;
+        var map_zoom = 3;
         
         var locations = [
-              ['Ho Chi Minh city', 10.7500, 106.6667, 2],
-              ['Ha Noi', 21.0285, 105.8542, 1]
-              
+              ['Causeway Bay, HongKong', 22.2859787, 114.1914919, 5],
+              ['Palm Desert, CA 92260, USA', 33.6917281, -116.4075854, 4],
+              ['Stockholm, Sweden', 59.3294, 18.0686, 3],
+              ['Ho Chi Minh city, Vietnam', 10.7500, 106.6667, 2],
+              ['Ha Noi, Vietnam', 21.0285, 105.8542, 1]
         ];
         
         //google map custom marker icon - .png fallback for IE11
@@ -198,7 +200,7 @@
 
         //set google map options
         var map_options = {
-            center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+            center: new google.maps.LatLng(46.862496, 103.846656),
             zoom: map_zoom,
             panControl: false,
             zoomControl: false,

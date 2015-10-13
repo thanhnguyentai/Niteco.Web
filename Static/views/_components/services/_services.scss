@@ -7,6 +7,14 @@
     z-index: 1;
     background: #fff;
     padding: 0 0 6rem;
+    overflow:hidden;
+    .col-xs-12{
+        @for $i from 1 through 8{
+            &:nth-child(#{$i}){
+                transition-delay: 150ms * $i;
+            }
+        }
+    }
 
     .service-item__container {
         width: 270px;
@@ -204,6 +212,16 @@
     background-size: cover;
     background-color: #333333;
     padding: 110px 0 90px;
+
+    .col-sm-4{
+        @for $i from 1 through 6{
+            &:nth-child(#{$i}){
+                transition-delay: 150ms * $i;
+            }
+        }
+    }
+
+
 
     .container {
         text-align: center;
