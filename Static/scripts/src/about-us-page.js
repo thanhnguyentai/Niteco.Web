@@ -4,15 +4,17 @@
     }
     var heightW = $(window).height();
     var deltaH = 200;
+    var recordNumber = $(".record-number");
+
     pageScroll.addCallback(function (scrollTop) {
-        if (!$(".record-number").hasClass("counted") && ($(".record-number .container").offset().top < scrollTop + heightW - deltaH)) {
-            $(".record-number").addClass("counted");
+        if (!recordNumber.hasClass("counted") && (recordNumber.find(".container").offset().top < scrollTop + heightW - deltaH)) {
+            recordNumber.addClass("counted");
             countRecord();
         }
     });
     
     function countRecord() {
-        $(".record-number").find(".statistic-number").each(function() {
+        recordNumber.find(".statistic-number").each(function () {
             $(this).countTo({
                 from: 0,
                 to: $(this).attr("data-count"),

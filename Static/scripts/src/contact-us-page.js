@@ -1,4 +1,4 @@
-﻿define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyB__eIsfbtydJhmiQwxQd7w30CgogsLk0k'], function () {
+﻿define(['base/page-scroll-animation', 'async!https://maps.googleapis.com/maps/api/js?key=AIzaSyB__eIsfbtydJhmiQwxQd7w30CgogsLk0k'], function (pageScrollAnimation) {
     var initMap = function() {
         //set your google maps parameters
         var map_zoom = 3;
@@ -265,9 +265,14 @@
             map.setZoom(map.getZoom() - 1);
         });
     }
+
+    function initScrollAnimation(container) {
+        pageScrollAnimation.init(container);
+    }
     
     return {
-        init: function () {
+        init: function (container) {
+            initScrollAnimation(container);
             initMap();
         }
     };

@@ -13,22 +13,28 @@
         var background = container.find('.page-introduction__background');
         var content = container.find('.page-introduction__content');
         var arrowButton = container.find('.page-introduction__arrow');
+        var baseBottom = parseInt(arrowButton.css('bottom'));
 
         var contentHeight = background.height();
 
         var callbackScroll = _.debounce(function (scrollTop) {
             if (scrollTop > contentHeight)
                 return;
+
+            /*
             if (!container.hasClass('loaded')) {
                 container.addClass('loaded');
             }
             if (scrollTop <= 20) {
                 container.removeClass('loaded');
             }
-
-            background.css('top', (-scrollTop / 2) + 'px');
+            */
+            background.css('top', (scrollTop / 2) + 'px');
+            arrowButton.css({
+                'bottom': (baseBottom - scrollTop) + 'px'
+            });
             content.css({
-                'margin-top': (-scrollTop / 2) + 'px',
+                'margin-top': (scrollTop / 2) + 'px',
                 'opacity': (1 - scrollTop * 1.5 / contentHeight)
             });
         }, 0);
