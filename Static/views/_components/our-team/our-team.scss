@@ -1,4 +1,13 @@
-﻿
+﻿.awards-section {
+
+    &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        clear: both;
+    }
+}
+
 .awards {
     width: 100%;
     float: left;
@@ -10,6 +19,18 @@
         height: 100%;
         width: 100%;
     }
+}
+
+.award-group, .award-subgroup {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.award-group:after, .award-subgroup:after {
+    content: " ";
+    display: block;
+    clear: both;
 }
 
 .__group {
@@ -56,8 +77,7 @@
         bottom: 0px;
         width: 100%;
         right: 0;
-        height: 82px;
-        font-size: 14px;
+        height: 82px;        
         font-weight: bold;
         color: #a1b1bc;
         text-align: left;
@@ -66,12 +86,12 @@
         display: block;
 
         @include respond-to-min($tabletSize) {
-            font-size: 1.2rem;
+            font-size: 0.8rem;
             line-height: 1rem;
         }
 
         @include respond-to-min($desktopSize) {
-            font-size: 1.2rem;
+            font-size: 0.8rem;
             line-height: 1rem;
         }
 
@@ -112,9 +132,9 @@
             }
         }
 
-		span{
-			display: block;
-		}
+        span {
+            display: block;
+        }
     }
 
     .__award-btn {
@@ -133,21 +153,38 @@
     }
 
     &.__award--selected {
+         border-bottom-color:#facd20;
+         .__award-logo {
+            width: 100%;
+            height: 298px;
+            opacity:1;
+            img {
+                opacity: 1;
+                width: 100%;
+                height: 100%;
+            }
+        }
         .__award-btn {
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
         }
-
         .__award-btn #Rectangle-51 {
             fill: #D8262C;
+        }
+        &:hover{
+            .__award-btn #Rectangle-51 {
+                fill: #D8262C;
+            }
         }
     }
 
     &:hover {
+        border-bottom-color:#facd20;
         .__award-logo {
             width: 100%;
             height: 298px;
+            opacity: 1;
 
             img {
                 opacity: 1;
@@ -155,22 +192,25 @@
                 height: 100%;
             }
         }
+         .__award-btn #Rectangle-51 {
+            fill: #2c3e50;
+        }
     }
 }
 
 .award-info {
     border-bottom: 1px solid #E9E9E9;
     border-top: 1px solid #E9E9E9;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
+    width: 100%;
 }
 
 .award-details {
     display: none;
 
     .__desc {
-        font-family: 'tiempos', Georgia;
-        color: #8B8B8B;
+        font-family: 'robotolight';
+        color: #6a7885;
         margin-top: 10px;
         font-size: 20px;
         line-height: 1.5;
@@ -178,7 +218,7 @@
 
 
     .__title {
-        font-size: 24px;
+        font-size: 1.5rem;
         margin: 10px 0;
     }
 
@@ -186,6 +226,7 @@
         max-width: 820px;
         margin-left: auto;
         margin-right: auto;
+        padding: 60px 15px;
 
         &:after {
             content: " ";
@@ -196,8 +237,7 @@
 }
 
 .award-details--active {
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
 }
 
 .award .__award-logo, .award .__award-btn {

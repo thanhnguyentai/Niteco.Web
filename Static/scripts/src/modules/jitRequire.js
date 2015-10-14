@@ -15,6 +15,10 @@ define(['jquery', 'underscore'], function ($, _) {
 		var deferred = $.Deferred(),
 			regModule = $el.data('module'),
 	        ref = $el.data('require');
+	    
+		if (!ref || ref.length == 0) {
+		    deferred.resolve(false);
+		}
 
 		var resolveDefer = _.debounce(function (module) {
 		    deferred.resolve(module);

@@ -331,14 +331,17 @@
 
     .case-study-item{
         width:100%;
-
         height:auto;
         display:table;
         border-collapse: separate;
-        border-spacing: 15px 8px;
+        border-spacing: 30px 15px;
         .case-study-content,.case-study-image{         
             display:table-cell;
             width:50%;
+             @include respond-to-max($tabletSize) {               
+                display:block;
+                width: 100%;
+            }
         }
         .case-study-image{
             img{
@@ -349,8 +352,12 @@
         .case-study-content{            
             background:#f4f4f4;
             vertical-align:middle;
-            padding:20px;
-            &+background-white{
+            padding:3%;
+             @include respond-to-max($tabletSize) {
+                display:block;
+                width: 100%;
+            }
+            &.background-white{
                 background:#fff;
             }
             .case-study-content__title{
@@ -443,7 +450,6 @@
 
         .service-item-detail__title {
             font-family: 'robotoblack';
-            text-transform: uppercase;
             color: #282828;
             font-size: 1.2rem;
             padding: 0.5rem 0 0;

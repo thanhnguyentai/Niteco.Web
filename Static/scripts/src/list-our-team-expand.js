@@ -3,15 +3,15 @@
 
     var container = null;
 
-    function e() {
+    function device() {
         var e = t.width();
         return 768 > e ? "mobile" : 992 > e ? "__subgroup" : "__group";
     }
 
     var t = $(window);
-
+    
     function init() {
-        if (container) {
+        if (t.width() > 992 && container) {
             var listPersonGroup = container.find('.award-list--top .award-group');
 
             var bottomListContainer = container.find('.award-list--bottom');
@@ -36,32 +36,39 @@
                 memberDetail = teamInfoSelector.find('.award-details[data-award-id="' + memeberId + '"]'),
                 memberVisible = ourTeamSelector.find(".award-details:visible"),
                 showContentDetail = function (type) {
-                    "slide" === type ? memberDetail.finish().slideDown(200) : memberDetail.finish().fadeIn(200),
-                    teamMember.removeClass("__award--selected"),
-                    memberPreview.addClass("__award--selected"),
-                    ourTeamSelector.find(".__subgroup").removeClass("__subgroup--active"),
-                    ourTeamSelector.find(".__group").removeClass("__group--active"),
-                    memberPreview.closest(".__subgroup").addClass("__subgroup--active"),
-                    memberPreview.closest(".__group").addClass("__group--active"), "mobile" === e() && $("html, body").animate({
-                        scrollTop: memberPreview.offset().top
-                    }, 300);
+
+                    "slide" === type ? memberDetail.finish().slideDown(500) : memberDetail.finish().fadeIn(500);
+                    teamMember.removeClass("__award--selected");
+                    memberPreview.addClass("__award--selected");
+                    ourTeamSelector.find(".__subgroup").removeClass("__subgroup--active");
+                    ourTeamSelector.find(".__group").removeClass("__group--active");
+                    memberPreview.closest(".__subgroup").addClass("__subgroup--active");
+                    memberPreview.closest(".__group").addClass("__group--active");
+
+                    if (device() === 'mobile') {
+                        $("html, body").animate({
+                            scrollTop: (memberPreview.offset().top - 85) + 'px'
+                        }, 300);
+                    }
+                    
+                    
                 };
             if ($this.hasClass("__award--selected"))
                 memberPreview.removeClass("__award--selected"),
-                memberVisible.finish().slideUp(200, function () {
-                    memberPreview.closest(".__subgroup").removeClass("__subgroup--active"),
+                memberVisible.finish().slideUp(500, function () {
+                    memberPreview.closest(".__subgroup").removeClass("__subgroup--active");
                     memberPreview.closest(".__group").removeClass("__group--active");
                 }
                 );
             else if (memberVisible.length) {
-                var u = e();
+                var u = device();
                 "mobile" === u ? memberVisible.finish().slideUp(200, function () {
                     showContentDetail("slide");
                 }
-                ) : memberPreview.parents("." + u).hasClass(u + "--active") ? memberVisible.finish().fadeOut(200, function () {
+                ) : memberPreview.parents("." + u).hasClass(u + "--active") ? memberVisible.finish().fadeOut(500, function () {
                     showContentDetail("fade");
                 }
-                ) : memberVisible.finish().slideUp(200, function () {
+                ) : memberVisible.finish().slideUp(500, function () {
                     showContentDetail("slide");
                 }
                 );

@@ -1,9 +1,14 @@
 ﻿.page-description__title-container {
     text-align: center;
-    padding: 110px 0;
+    padding: 60px 0;
     position: relative;
     z-index: 1;
     background: #fff;
+    font-size: 0px;
+
+    @include respond-to-min($tabletSize) {
+        padding: 110px 0;
+    }
 }
 
 .page-description__title {
@@ -11,16 +16,19 @@
     text-transform: uppercase;
     text-align: center;
     color: #2f2933;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1rem 0 0.5rem;
+    margin: 0;
 
     @include respond-to-min($tabletSize) {
         font-size: rem(36px);
-        padding: 1rem 0 1rem;
+        line-height: rem(30px);
+        padding: 1rem 0;
     }
 
     @include respond-to-min($desktopSize) {
         font-size: rem(36px);
+        padding: rem(30px) 0;
     }
 
     @include respond-to-min($laptopSize) {
@@ -37,6 +45,7 @@
 
     @include respond-to-min($tabletSize) {
         font-size: rem(24px);
+        line-height: rem(20px);
     }
 
     @include respond-to-min($desktopSize) {
@@ -45,6 +54,10 @@
 
     @include respond-to-min($laptopSize) {
     }
+}
+
+.page-description__yellow-underline{
+    margin: rem(28px) 0;
 }
 
 .page-description__description {
@@ -56,7 +69,8 @@
     font-size: 1.2rem;
 
     @include respond-to-min($tabletSize) {
-        font-size: 1.5rem;
+        font-size: rem(24px);
+        line-height: rem(35px);
     }
 
     @include respond-to-min($desktopSize) {

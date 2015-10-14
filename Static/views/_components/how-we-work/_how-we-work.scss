@@ -1,14 +1,14 @@
 ﻿/*Our-process*/
 .section-our-process {
     background-color: #fff;
-    padding: 105px 0;
+    padding: 30px 0;
 
     .our-process-introduce {
         margin: 0;
         text-align: center;
 
         h2 {
-            font-size: rem(56px);
+            font-size: rem(44px);
             font-family: 'robotoblack';
             color: #282828;
             line-height: rem(48px);
@@ -88,21 +88,15 @@
                 text-align: center;
                 font-family: 'robotothin';
                 color: #fff;
-                padding-top: 28px;
-
+                padding-top: 30px;
+                font-size: rem(20px);
                 @include respond-to-min($tabletSize) {
-                    font-size: 1.25rem;
-                    line-height: 3rem;
                 }
 
                 @include respond-to-min($desktopSize) {
-                    font-size: 1.25rem;
-                    line-height: 3rem;
                 }
 
                 @include respond-to-min($laptopSize) {
-                    font-size: 1.25rem;
-                    line-height: 3rem;
                 }
             }
 
@@ -138,18 +132,7 @@
                     font-family: 'robotolight';
                     color: #2c3e50;
                     margin-bottom: 30px;
-
-                    @include respond-to-min($tabletSize) {
-                        font-size: 1.5rem;
-                    }
-
-                    @include respond-to-min($desktopSize) {
-                        font-size: 1.5rem;
-                    }
-
-                    @include respond-to-min($laptopSize) {
-                        font-size: 1.5rem;
-                    }
+                    font-size: rem(24px);
                 }
 
                 .process-info {
@@ -174,6 +157,16 @@
             }
         }
     }
+    @include respond-to-min($desktopSize) {
+        & {
+            padding: 105px 0;
+        }
+        .our-process-introduce {
+            h2 {
+                font-size: rem(56px);
+            }
+        }
+    }
 }
 
 /* Partnership section */
@@ -183,21 +176,33 @@
     text-align: center;
     background: url('/img/how-we-work-partnership-background.jpg');
     background-size: cover;
-    padding: 110px 0;
+    padding: 60px 0;
     h1 {
-        font-size: rem(56px);
         font-family: 'robotobold';
         color: #fff;
         padding: 0 0;
         margin: 0 0;
     }
-
+    .job-requires_list {
+        padding: 0 10px;
+        li {
+            list-style: none;
+            text-align: left;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 45px;
+            background: url('/img/icon-tick.png') no-repeat 20px 25px;
+            font-family: 'robotolight';
+            font-size: rem(16px);
+            line-height: rem(24px);
+            border-top: 1px solid #e9edee;
+        }
+    }
     .how-we-work-partnership_text {
         font-family: 'robotolight';
-        font-size: rem(24px);
         text-align: left;
         color: #fff;
-        margin-bottom: 0;
+        margin-bottom: 50px;
     }
 
     .content-models {
@@ -213,11 +218,22 @@
                 color: #fff;
                 padding: 20px 0;
                 font-family: 'robotoblack';
-                font-size: rem(30px);
+                font-size: rem(24px);
                 letter-spacing: 2px;
             }
 
-
+			.job-requires_list {
+            padding: 0;
+            li {
+                list-style: none;
+				text-align : left;
+                padding-left: 35px;
+                background: url('/img/icon-tick.png') no-repeat 10px 10px;
+                font-family: 'robotolight';
+                font-size: rem(16px);
+                line-height: rem(40px);
+				}
+			}
             .partnership-models__description {
                 text-align: left;
                 font-family: 'robotolight';
@@ -259,12 +275,30 @@
     }
 
     @include respond-to-min($desktopSize) {
+        & {
+            padding: 110px 0;
+        }
         .partnership-models {
-            height: 500px;
+            height: 600px;
+        }
+        h1 {
+            font-size: rem(56px);
+        }
+        .how-we-work-partnership_text {
+            font-size: rem(24px);
+        }
+        .content-models {
+            .partnership-models {
+                .partnership-models__title {
+                    font-size: rem(30px);
+                }
+            }
         }
     }
 
     @include respond-to-min($laptopSize) {
-
+        .partnership-models {
+            height: 500px;
+        }
     }
 }

@@ -1,22 +1,39 @@
 ﻿{
     "joinOurTeam": {
-        "background": "/img/careers.jpg",
-        "smallText": "Grow your career",
+        "background": "/img/home-careers.jpg",
+        "backgroundHover": "/img/home-careers-hover.jpg",
+        "smallText": "Tell us what you need",
         "largeText": "Join our team",
         "description": "This text here is just a tool to give you place holder for your own real copy",
         "url": "/Static/compiled/pages/careers.html"
     },
     "letWorkTogether": {
         "background": "",
-        "smallText": "Like what you see?",
+        "smallText": "See how we work with clients?",
         "largeText": "Let's work together",
         "description": "This text here is just a tool to give you place holder for your own real copy",
         "url": "#"
     },
+	"leftOutTeam": {
+        "background": "",
+        "smallText": "Check available positions?",
+        "largeText": "Careers with Us",
+        "description": "This text here is just a tool to give you place holder for your own real copy",
+        "url": "#"
+    },
+	"rightOurTeam": {
+        "background": "/img/careers.jpg",
+        "smallText": "Tell us what you need?",
+        "largeText": "Contact Us",
+        "description": "This text here is just a tool to give you place holder for your own real copy",
+        "url": "#"
+    },
     "services": {
-        "background": "/img/services.jpg",
+        "background": "/img/home-services.jpg",
+        "backgroundHover": "/img/home-services-hover.jpg",
         "smallText": "Our",
         "largeText": "Services",
+        "text":  "Services",
         "description": "This text here is just a tool to give you place holder for your own real copy",
         "url": "/Static/compiled/pages/services.html"
     },

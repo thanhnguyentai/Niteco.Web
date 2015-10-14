@@ -16,7 +16,6 @@ body {
 
 .content-container {
     transition: all 500ms ease;
-	transform: translate3d(0,0,0);
 	backface-visibility: hidden;
 
     &.loading {

@@ -1,6 +1,7 @@
-.record-number{
-    background-image:url('/img/about-us-business-bottom-background.jpg');
+.record-number {
+    background-image: url('/img/about-us-business-bottom-background.jpg');
 }
+
 .about-group__content-container {
     background-color: #fff;
     background-size: cover;
@@ -9,32 +10,50 @@
     position: relative;
     z-index: 1;
     transition-delay: 0.5s;
+
+    &.record-number {
+        .col-xs-12:last-child{
+            .about-us-info{
+                margin: 0;
+            }
+        }
+    }
+
     .about-us-info {
         background: #fff;
         text-align: center;
+        padding: 47px 0 51px;
+
         margin: 0 0 20px;
-        padding: 20px 0;
+
+        @include respond-to-min($tabletSize) {
+            margin: 0;
+        }
 
         .about-us-icon {
             width: 78px;
             height: 78px;
             background-size: cover;
-            margin: 40px auto 10px auto;
+            margin: 0 auto 30px;
         }
 
         .statistic-number {
-            font-size: 3.5rem;
+            font-size: rem(56px);
+            line-height: rem(40px);
             font-family: robotoblack;
             color: #cedae1;
             letter-spacing: 2px;
+            margin: 0 auto 10px;
+            display: inline-block;
         }
 
         p {
-            font-size: 0.8rem;
+            font-size: rem(14px);
+            line-height: rem(22px);
             font-family: robotoblack;
-            color: #000;
-            margin-top: -10px;
+            color: #333;
             letter-spacing: 1px;
+            margin: 0;
         }
     }
 
@@ -48,10 +67,11 @@
             padding: 0 15px 0 0;
         }
 
-        .about-certified__description {
-            font-family: 'robotothin';
+        .about-certified__header {
+            font-family: 'latolight';
+            color: #282828;
             padding: 0;
-            margin: 0;
+            margin: 0 0 20px;
 
             @include respond-to-min($tabletSize) {
                 font-size: rem(20px);
@@ -66,19 +86,21 @@
             @include respond-to-min($laptopSize) {
                 font-size: rem(35px);
                 line-height: 40px;
+                margin: 0 0 50px;
             }
 
             span {
-                font-weight: bold;
+                font-family: 'latoregular';
             }
         }
 
-        p {
-            color: #9ca5ae;
+        .about-certified__description {
+            color: #6a7885;
+            letter-spacing: 1px;
             font-weight: normal;
             font-family: 'robotolight';
             width: 90%;
-            margin-top: 20px;
+            margin: 0;
 
             @include respond-to-min($tabletSize) {
                 font-size: rem(16px);
@@ -93,7 +115,6 @@
             @include respond-to-min($laptopSize) {
                 font-size: rem(24px);
                 line-height: 35px;
-                margin-top: 62px;
             }
         }
     }
@@ -116,11 +137,12 @@
             color: #9ca5ae;
             font-size: rem(200px);
             line-height: 200px;
-            display:block;
+            display: block;
 
             @include respond-to-min($tabletSize) {
                 font-size: rem(240px);
                 line-height: 120px;
+                padding: 0 0 50px 0;
             }
 
             @include respond-to-min($desktopSize) {
@@ -130,7 +152,8 @@
 
             @include respond-to-min($laptopSize) {
                 font-size: rem(357px);
-                line-height: 200px;
+                padding: 0 0 60px 0;
+                line-height: 180px;
             }
         }
 
@@ -139,6 +162,8 @@
             font-family: robotothin;
             font-size: rem(12px);
             line-height: 20px;
+            margin: 0;
+            padding: 0;
 
             @include respond-to-min($tabletSize) {
                 font-size: rem(14px);
@@ -159,7 +184,6 @@
     &.about-offices-block__container {
         background-color: #282828;
         text-align: center;
-        
     }
 
     .yellow-divider {
@@ -178,7 +202,7 @@
             color: #fff;
             text-align: center;
             line-height: 35px;
-            font-size: 24px;
+            font-size: rem(24px);
             width: 95%;
             margin: 0 auto;
 
@@ -196,6 +220,10 @@
                 font-size: rem(56px);
                 line-height: 60px;
             }
+        }
+
+        .yellow-divider{
+            margin-top: 20px;
         }
     }
 
@@ -235,6 +263,7 @@
         font-size: rem(20px);
         padding: 20px 0;
         transition-delay: 1.5s;
+
         @include respond-to-min($tabletSize) {
             line-height: 40px;
             font-size: rem(28px);
@@ -244,7 +273,7 @@
             width: 50%;
             left: 50%;
             margin-left: 30px;
-            padding: 170px 0px 300px;
+            padding: 150px 0px 320px;
             line-height: 34px;
             font-size: rem(26px);
             text-align: left;
@@ -252,7 +281,7 @@
 
         @include respond-to-min($laptopSize) {
             margin-left: 75px;
-            padding: 220px 0px 300px;
+            padding: 200px 0px 320px;
             line-height: 60px;
             font-size: rem(46px);
         }
@@ -416,9 +445,9 @@
             padding: 35px 40px;
             margin-bottom: 40px;
 
-            &{
-                @for $i from 1 through 5{
-                    &:nth-child(#{$i}){
+            & {
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
                         transition-delay: 200ms * $i;
                     }
                 }
@@ -522,7 +551,7 @@
 /*--- Socially Responsible ---*/
 .about-socially-container {
     padding: 0 0 110px;
-	background: #fff;
+    background: #fff;
 
     .page-description__title-container {
         padding-bottom: 80px;
@@ -566,7 +595,7 @@
                 width: 100%;
                 height: 270px;
                 position: relative;
-                transition-delay:1s;
+                transition-delay: 1s;
 
                 @include respond-to-min($desktopSize) {
                     height: 250px;
@@ -580,7 +609,8 @@
                     height: 270px;
                     width: 100%;
                     margin: 0 0 5px;
-                     transition-delay:1s;
+                    transition-delay: 1s;
+
                     @include respond-to-min($desktopSize) {
                         height: 250px;
                     }

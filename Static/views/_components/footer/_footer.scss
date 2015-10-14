@@ -46,7 +46,7 @@
     &__partner-container {
         display: block;
         text-align: center;
-
+        margin-bottom: 30px;
         @include respond-to-min($tabletSize) {
             display: inline-block;
         }

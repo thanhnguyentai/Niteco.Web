@@ -42,6 +42,14 @@
             enableSearchBox(true);
         });
 
+        $(window).resize(function () {
+            searchContainer.css('opacity',0);
+            setTimeout(function () {
+                enableSearchBox(true);
+                searchContainer.css('opacity', 1);
+            }, 500);
+        });
+
         searchContainer.find('.search-default a').on('click', function (e) {
             e.preventDefault();
             var href = $(this).attr('href');

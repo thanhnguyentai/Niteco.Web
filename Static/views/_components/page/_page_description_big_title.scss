@@ -3,9 +3,11 @@
         font-family: 'robotoblack';
         text-transform: none;
         color: #2f2933;
-        padding: rem(18px) 0 0;
+        letter-spacing: 1px;
+        padding: 0;
         @include respond-to-min($desktopSize) {
             font-size: rem(56px);
+            padding: rem(18px) 0 0;
         }
 
         @include respond-to-min($laptopSize) {

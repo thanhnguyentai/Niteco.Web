@@ -23,7 +23,7 @@
         padding: 0 0 1.8rem;
         position: relative;
         text-align: center;
-
+        cursor:pointer;
         &::after {
             content: '';
             height: 13px;
@@ -50,14 +50,14 @@
                 font-family: 'robotomedium';
                 color: #2c3e50;
                 text-transform: capitalize;
-                font-size: 1.1rem;
+                font-size: rem(18px);
                 padding: 1rem 0 0.5rem;
             }
 
             .service-item__description {
                 font-family: 'latoregular';
                 color: #a1b1bc;
-                font-size: 1.05rem;
+                font-size: rem(14px);
                 line-height: 1.5rem;
             }
         }
@@ -110,6 +110,9 @@
     .service-contact__white-button {
         float: left;
         margin: 1rem 0 0;
+        font-size: rem(15px);
+        border-width: 2px;
+        padding: 12px 14px;
 
         @include respond-to-min($laptopSize) {
             float: right;
@@ -144,6 +147,7 @@
         .service-item-detail__image {
             right: 50%;
             margin-right: 110px;
+            padding-top: 145px;
         }
 
         .service-item-detail__content {
@@ -159,6 +163,7 @@
         .service-item-detail__image {
             left: 50%;
             margin-left: 110px;
+            padding-top: 145px;
         }
     }
 
@@ -167,6 +172,7 @@
         bottom: 0px;
         max-height: 100%;
         display: none;
+        padding-top: 145px;
 
         @include respond-to-min($tabletSize) {
             display: block;
@@ -186,21 +192,22 @@
 
         .service-item-detail__title {
             font-family: 'robotoblack';
-            text-transform: uppercase;
             color: #282828;
             font-size: 1.2rem;
             padding: 0.5rem 0 0;
 
             @include respond-to-min($tabletSize) {
-                font-size: 1.5rem;
+                font-size: rem(42px);
             }
         }
 
         .service-item-detail__description {
             font-family: 'robotolight';
             color: #6a7885;
-            font-size: 1rem;
+            font-size: rem(18px);
             line-height: 1.6rem;
+            word-spacing: 2px;
+            letter-spacing: 1px;
         }
     }
 }

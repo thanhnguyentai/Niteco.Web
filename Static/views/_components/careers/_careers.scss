@@ -3,7 +3,82 @@
     z-index: 1;
     background: #fff;
 }
+.careers-page-container {
+    .page-description__sub-title {
+        letter-spacing: 2px;
+    }
+    .view-jobs-opening {
+        margin-top: 75px;
+        color: #fff;
+        a.view-more-jobs {
+            text-transform: uppercase;
+            font-size: rem(14px);
+        }
 
+        @include respond-to-min($laptopSize) {
+            a.view-more-jobs {
+                font-size: rem(15px);
+            }
+        }
+        @include respond-to-min($desktopSize) {
+            a.view-more-jobs {
+                font-size: rem(15px);
+            }
+        }
+        @include respond-to-min($tabletSize) {
+            
+        }
+        p {
+            margin: 30px 0;
+            text-align: center;
+            font-family: 'robotolight';
+
+            strong {
+                font-family: 'robotobold';
+            }
+
+            @include respond-to-min($tabletSize) {
+                & {
+                    height: 55px;
+                    line-height: rem(55px);
+                    margin: 0;
+                    text-align: left;
+                    letter-spacing: 0.5px;
+                }
+            }
+
+            @include respond-to-min($desktopSize) {
+                & {
+                    height: 55px;
+                    margin: 0;
+                    text-align: left;
+                }
+            }
+
+            @include respond-to-min($laptopSize) {
+                & {
+                    height: 55px;
+                    font: 1.875rem/55px 'robotolight';
+                    margin: 0;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    @include respond-to-min($desktopSize) {
+        .page-description__title-container {
+            padding-top: 132px;
+            padding-bottom: 132px;
+        }
+    }
+
+    @include respond-to-min($laptopSize) {
+        .page-description__title-container {
+            padding-top: 132px;
+            padding-bottom: 132px;
+        }
+    }
+} 
 .careers-middle-block {
     padding: 106px 0 82px;
     background: #333;
@@ -19,7 +94,7 @@
     .careers-step-detail {
         position: relative;
         text-align: center;
-        padding: 66px 15px;
+        padding: 70px 15px;
         background: #fff;
         margin-bottom: 66px;
 
@@ -39,21 +114,20 @@
         .step-number {
             position: absolute;
             left: 50%;
-            top: -33px;
-            width: 100px;
-            height: 100px;
-            margin-left: -50px;
+            top: -40px;
+            width: 115px;
+            height: 115px;
+            margin-left: -57px;
             border-radius: 100px;
             border: 8px solid #fff;
-            font: 3.75rem/85px 'robotoblack';
+            font: 3.75rem/95px 'latoblack';
             color: #2c3e50;
             background: #cedae1;
         }
 
         .step-content {
-            height: 160px;
+            height: 200px;
             padding: 0;
-            overflow: hidden;
 
             @include respond-to-min($desktopSize) {
             }
@@ -89,43 +163,6 @@
     .careers-apply-step > div.col-sm-4:last-child {
         .careers-step-detail {
             margin-bottom: 0;
-        }
-    }
-}
-
-.view-jobs-opening {
-    margin-top: 75px;
-    color: #fff;
-
-    p {
-        margin: 30px 0;
-        text-align: center;
-        font-family: 'robotolight';
-
-        strong {
-            font-family: 'robotobold';
-        }
-
-        @include respond-to-min($tabletSize) {
-            height: 55px;
-            line-height: rem(55px);
-            margin: 0;
-            text-align: left;
-            letter-spacing: 0.5px;
-        }
-
-        @include respond-to-min($desktopSize) {
-            height: 55px;
-            margin: 0;
-            text-align: left;
-        }
-
-        @include respond-to-min($laptopSize) {
-            height: 55px;
-            font: 1.875rem/55px 'robotolight';
-            margin: 0;
-            letter-spacing: -1px;
-            text-align: left;
         }
     }
 }
@@ -213,10 +250,16 @@
 .section-job-opening {
     @extend .section-our-values;
     padding: 100px  0 115px;
+    p {
+        strong {
+            letter-spacing: 2px;
+        }
+    }
     .our-values-container {
         .view-jobs-opening a.view-more-jobs {
-            text-transform: uppercase;
+            text-transform: uppercase !important;
             font-size: rem(15px);
+            padding: 0 25px;
         }
         .our-value-header {
             h2 {
@@ -231,7 +274,10 @@
             padding: 5px;
             min-height: 0;
             cursor: pointer;
-
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 20px;
+            }
             .job-details {
                 min-height: 155px;
                 position: relative;
@@ -357,7 +403,7 @@
         font-family: 'robotolight';
         color: #fff;
         padding: 30px 0 60px;
-
+        letter-spacing: 1.5px;
         @include respond-to-min($tabletSize) {
             font-size: 1.5rem;
             line-height: 1.875rem;

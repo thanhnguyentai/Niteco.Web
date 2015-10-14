@@ -1,7 +1,7 @@
 ﻿{
     "careers_job_opening_view_more": {
-        "hightlight_text": "Looking for a career?",
-        "normal_text": "Let’s see how we can help you grow",
+        "hightlight_text": "What career are you looking to build?",
+        "normal_text": "Grow with us",
         "button_text": "View job openings",
         "button_url": "#"
     },
@@ -12,8 +12,8 @@
         "button_url": "#"
     },
     "how_we_work_view_more": {
-        "hightlight_text": "Let us know what you need,",
-        "normal_text": "so we can ensure maximum productivity!",
+        "hightlight_text": "Looking for a smooth-running partnership?",
+        "normal_text": " Look no further.",
         "button_text": "Contact Us",
         "button_url": "#"
     }

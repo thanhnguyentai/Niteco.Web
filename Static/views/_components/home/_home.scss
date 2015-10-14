@@ -132,14 +132,6 @@ $numberRow: 3;
         z-index: 5;
         font-size: 0;
 
-        &::before {
-            content: '';
-            display: inline-block;
-            height: 100%;
-            position: relative;
-            vertical-align: middle;
-        }
-
         .home-block-item__content {
             display: inline-block;
             width: 100%;

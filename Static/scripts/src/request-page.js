@@ -1,4 +1,4 @@
-﻿define(['jquery', 'underscore', 'base/loading', 'base/modules/jitRequire', 'vendor/history', 'base/top-navigator'], function ($, _, loading, jitRequire, history, topNavigator) {
+﻿define(['jquery', 'underscore', 'base/loading', 'base/modules/jitRequire', 'vendor/history', 'base/top-navigator', 'base/modules/animate'], function ($, _, loading, jitRequire, history, topNavigator, animate) {
 
     'use strict';
 
@@ -54,10 +54,6 @@
 
     function showLoading() {
         loading.startLoading();
-        $('body').velocity('scroll', {
-            duration: 250,
-            offset: 0
-        });
     }
 
     function hideLoading(callback) {
@@ -84,45 +80,58 @@
 
         $('body').toggleClass('overflow-hidden');
 
-        var timeout = setTimeout(function () {
-            clearTimeout(timeout);
+        var displayPage = function() {
+            var timeout = setTimeout(function() {
+                clearTimeout(timeout);
 
-            var listContents = pageWrapper.find('.content-container');
-            if (isBackHome) {
-                listContents.addClass('animating-back');
-            } else {
-                listContents.addClass('animating');
-            }
-
-            listContents.eq(0).one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
-                for (var i = 0; i < listContents.length; i++) {
-                    if (isBackHome) {
-                        if (!listContents.eq(i).hasClass('loading-back')) {
-                            listContents.eq(i).remove();
-                        }
-                    } else {
-                        if (!listContents.eq(i).hasClass('loading')) {
-                            listContents.eq(i).remove();
-                        }
-                    }
+                var listContents = pageWrapper.find('.content-container');
+                if (isBackHome) {
+                    listContents.addClass('animating-back');
+                } else {
+                    listContents.addClass('animating');
                 }
 
+                listContents.eq(0).one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
+                    for (var i = 0; i < listContents.length; i++) {
+                        if (isBackHome) {
+                            if (!listContents.eq(i).hasClass('loading-back')) {
+                                listContents.eq(i).remove();
+                            }
+                        } else {
+                            if (!listContents.eq(i).hasClass('loading')) {
+                                listContents.eq(i).remove();
+                            }
+                        }
+                    }
 
-                var timeout1 = setTimeout(function () {
-                    clearTimeout(timeout1);
-                    pageWrapper.find('.content-container').removeClass('loading loading-back animating animating-back');
-                    jitRequire.findDeps(pageWrapper, function () {
-                        var timeout2 = setTimeout(function () {
-                            clearTimeout(timeout2);
-                            $('body').toggleClass('overflow-hidden');
 
-                            if (callback)
-                                callback(title);
-                        }, 500);
-                    });
-                }, 250);
+                    var timeout1 = setTimeout(function() {
+                        clearTimeout(timeout1);
+                        pageWrapper.find('.content-container').removeClass('loading loading-back animating animating-back');
+                        jitRequire.findDeps(pageWrapper, function() {
+                            var timeout2 = setTimeout(function() {
+                                clearTimeout(timeout2);
+                                $('body').toggleClass('overflow-hidden');
+
+                                if (callback)
+                                    callback(title);
+                            }, 500);
+                        });
+                    }, 250);
+                });
+            }, 500);
+        };
+
+        if ($(window).scrollTop() <= 0) {
+            displayPage();
+        } else {
+            animate($('body'), 'scroll', {
+                duration: 500,
+                offset: 0
+            }).then(function () {
+                displayPage();
             });
-        }, 200);
+        }
     }
 
     function displayError() {

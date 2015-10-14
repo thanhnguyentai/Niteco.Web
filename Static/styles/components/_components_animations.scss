@@ -153,3 +153,13 @@
 		transform: scale(1); 
 	}
 }
+
+
+.rocket-fly{  
+    transform: translateY(-75px);
+    transition:all 1.5s ease-in-out;
+    transition-delay:1s;
+    &.inactive{
+	    transform: translateY(140px);
+    }
+}

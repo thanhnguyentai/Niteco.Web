@@ -39,6 +39,7 @@
             font-family: robotoblack;
             text-align: center;
             font-weight: bold;
+            font-size: 0px;
             top: 47%;
             @include align-center-block(50%,50%);
             width: 90%;
@@ -48,21 +49,21 @@
             }
 
             h1 {
-                font-size: 2rem;
-                line-height: 20px;
+                font-size: 3rem;
+                line-height: rem(20px);
                 padding: 0 0 20px 0;
                 margin: 0;
                 color: #fff;
 
                 @include respond-to-min($tabletSize) {
                     font-size: 4rem;
-                    line-height: 60px;
+                    line-height: rem(60px);
                     padding: 0 0 30px 0;
                 }
 
                 @include respond-to-min($laptopSize) {
-                    font-size: 5.625rem;
-                    line-height: 60px;
+                    font-size: rem(90px);
+                    line-height: rem(73px);
                     padding: 0 0 30px 0;
                 }
             }
@@ -83,7 +84,7 @@
                 }
 
                 @include respond-to-min($laptopSize) {
-                    font-size: 2.1rem;
+                    font-size: rem(40px);
                     line-height: 40px;
                 }
             }
