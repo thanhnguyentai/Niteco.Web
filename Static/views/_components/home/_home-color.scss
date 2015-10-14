@@ -1,3 +1,9 @@
+.home-content-wrapper{
+	&.content-wrapper{
+		padding: 0;
+	}
+}
+
 .home-color-block-item {
     &__background, &__content-container {
         position: absolute;
@@ -171,8 +177,54 @@
             position: absolute;
             top: 22px;
             left: 50%;
-            margin-left: -15px;
+            margin-left: -13px;
         }
+
+		/*-- our team --*/
+		.home-block__icon-puzzle-white{
+			width: 62px;
+			height: 52px;
+			background: url('/img/home-our-team-icon.png') no-repeat 0 0;
+			display: inline-block;
+			position: relative;
+			transition: transform 300ms ease-in-out;
+			transform: translate(-10px,-10px) rotate(20deg);
+		}
+		.home-block__icon-puzzle-blue{
+			width: 52px;
+			height: 62px;
+			background: url('/img/home-our-team-icon.png') no-repeat -75px 0;
+			display: inline-block;
+			position: relative;
+			margin: 0 0 -10px -10px;
+			transition: transform 300ms ease-in-out;
+			transform: translate(10px, -10px);
+		}
+		.home-block__line-separate{
+			display: block;
+			width: 100%;
+			height: 1px;
+			margin-top: -1px;
+		}
+		.home-block__icon-puzzle-yellow{
+			width: 52px;
+			height: 62px;
+			background: url('/img/home-our-team-icon.png') no-repeat 0 -65px;
+			display: inline-block;
+			position: relative;
+			margin: -15px -10px 0 0;
+			transition: transform 300ms ease-in-out;
+			transform: translate(-10px, 10px) rotate(-10deg);
+		}
+		.home-block__icon-puzzle-orange{
+			width: 62px;
+			height: 52px;
+			background: url('/img/home-our-team-icon.png') no-repeat -65px -75px;
+			display: inline-block;
+			position: relative;
+			transition: transform 300ms ease-in-out;
+			transform: translate(10px, 10px) rotate(10deg);
+		}
     }
 
     &:hover {
@@ -208,6 +260,24 @@
         .home-color-block-item__service-text{
             color: #ff9f47;
         }
+
+		/*-- our team animation --*/
+		.home-block__icon-puzzle-white{
+			transform: translate(0px,0px) rotate(0deg);
+		}
+		.home-block__icon-puzzle-blue{
+			transform: translate(0px, 0px);
+		}
+		.home-block__icon-puzzle-yellow{
+			transform: translate(0px, 0px) rotate(0deg);
+		}
+		.home-block__icon-puzzle-orange{
+			transform: translate(0px, 0px) rotate(0deg);
+		}
+
+		.home-color-block-item__our-team-text{
+			color: #46b29d;
+		}
     }
     /*-- keyframe--*/
     @keyframes spin-animation {
