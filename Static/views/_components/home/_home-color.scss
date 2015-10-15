@@ -215,10 +215,11 @@
                 transform: scale(0.7);
             }
 
-            @include respond-to-min($laptopSize) {
-                margin: 0 0 30px;
+
+			@include respond-to-min($bigScreen){
+				margin: 0 0 30px;
                 transform: scale(1);
-            }
+			}
         }
 
         &__text {

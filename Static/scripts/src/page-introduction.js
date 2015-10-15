@@ -5,17 +5,32 @@
     pageScroll.init();
 
     var heightPageHeader = 90; // percent
+    var contentHeight = 0;
+    var isInit = false;
+
+    function calculateHeight(container) {
+        if (!isInit) {
+            isInit = true;
+
+            if (!window.parent.$('iframe') || window.parent.$('iframe').length == 0) {
+                container.parent().height($(window).height() * heightPageHeader / 100 + 'px');
+
+                $('head').append('<style type="text/css">.page-introduction-container {height:' + $(window).height() * heightPageHeader / 100 + 'px' + ';}</style>');
+            }
+
+            var background = container.find('.page-introduction__background');
+            contentHeight = background.height();
+        }
+    }
 
     function PageIntroduction(container) {
-        if (!window.parent.$('iframe') || window.parent.$('iframe').length == 0) {
-            container.parent().height($(window).height() * heightPageHeader / 100 + 'px');
-        }
-        var background = container.find('.page-introduction__background');
+        calculateHeight(container);
+
         var content = container.find('.page-introduction__content');
         var arrowButton = container.find('.page-introduction__arrow');
         var baseBottom = parseInt(arrowButton.css('bottom'));
-
-        var contentHeight = background.height();
+        var background = container.find('.page-introduction__background');
+        contentHeight = background.height();
 
         var callbackScroll = _.debounce(function (scrollTop) {
             if (scrollTop > contentHeight)
@@ -46,6 +61,14 @@
                 duration: 500, offset: contentHeight, easing: 'ease-in-out',
                 complete: function () { }
             });
+        });
+
+        $(window).on('resize', function () {
+            var timeout = setTimeout(function () {
+                isInit = false;
+                calculateHeight(container);
+                clearTimeout(timeout);
+            }, 500);
         });
     }
 

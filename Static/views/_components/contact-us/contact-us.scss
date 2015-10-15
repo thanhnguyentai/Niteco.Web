@@ -1,295 +1,335 @@
 ﻿.contact-us-page {
-    height: 100%;
+	height: 100%;
 }
 
 .no-gutter {
-    padding-left: 0;
-    padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .map-office-section {
-    padding-top: 85px;
+	padding-top: 85px;
 
-    @include respond-to-max($desktopSize) {
-        padding-top: 60px;
-    }
+	@include respond-to-max($desktopSize) {
+		padding-top: 60px;
+	}
 }
 
 #google-container {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    background-color: #e7eaf0;
+	position: relative;
+	width: 100%;
+	height: 600px;
+	background-color: #e7eaf0;
 }
 
 
 #cd-google-map {
-    position: relative;
+	position: relative;
 }
 
 #cd-google-map address {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    padding: 1em 1em;
-    background-color: rgba(211, 104, 104, 0.9);
-    color: white;
-    font-size: 13px;
-    font-size: 0.8125rem;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	padding: 1em 1em;
+	background-color: rgba(211, 104, 104, 0.9);
+	color: white;
+	font-size: 13px;
+	font-size: 0.8125rem;
 }
 
 @media only screen and (min-width: 768px) {
-    #cd-google-map address {
-        font-size: 15px;
-        font-size: 0.9375rem;
-        text-align: center;
-    }
+	#cd-google-map address {
+		font-size: 15px;
+		font-size: 0.9375rem;
+		text-align: center;
+	}
 }
 
 #cd-zoom-in, #cd-zoom-out {
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
-    margin-left: 10px;
-    background-color: rgba(211, 104, 104, 0.9);
-    background-repeat: no-repeat;
-    background-size: 32px 64px;
-    background-image: url("/img/cd-icon-controller.svg");
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	margin-left: 10px;
+	background-color: rgba(211, 104, 104, 0.9);
+	background-repeat: no-repeat;
+	background-size: 32px 64px;
+	background-image: url("/img/cd-icon-controller.svg");
 }
 
 .no-touch #cd-zoom-in:hover, .no-touch #cd-zoom-out:hover {
-    background-color: #d36868;
+	background-color: #d36868;
 }
 
 @media only screen and (min-width: 768px) {
-    #cd-zoom-in, #cd-zoom-out {
-        margin-left: 50px;
-    }
+	#cd-zoom-in, #cd-zoom-out {
+		margin-left: 50px;
+	}
 }
 
 #cd-zoom-in {
-    background-position: 50% 0;
-    margin-top: 10px;
-    margin-bottom: 1px;
+	background-position: 50% 0;
+	margin-top: 10px;
+	margin-bottom: 1px;
 }
 
 @media only screen and (min-width: 768px) {
-    #cd-zoom-in {
-        margin-top: 50px;
-    }
+	#cd-zoom-in {
+		margin-top: 50px;
+	}
 }
 
 #cd-zoom-out {
-    background-position: 50% -32px;
+	background-position: 50% -32px;
 }
 
 
 
 /*Our locations*/
 .section-our-locations {
-    .location-item {
-        background: #fff;
-        display: block;
+	.location-item {
+		background: #fff;
+		display: block;
 
-        .location-image, .location-info {
-            position: relative;
-            display: block;
-            min-height: 220px;
+		.location-image, .location-info {
+			position: relative;
+			display: block;
+			min-height: 220px;
 
-            &.social-links {
-                min-height: 280px;
-            }
-        }
+			&.social-links {
+				min-height: 280px;
+			}
+		}
 
-        .location-image {
-            background: #a1b1bc;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
+		.location-image {
+			background: #a1b1bc;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
 
-        .location-info {
-            background: #f5f5f5;
-            padding: rem(40px) rem(30px);
+		.location-info {
+			background: #f5f5f5;
+			padding: rem(40px) rem(30px);
 
-            .location-title {
-                font-family: 'robotoblack';
-                color: #2c3e50;
-                display: block;
-                text-transform: uppercase;
 
-                @include respond-to-min($desktopSize) {
-                    font-size: rem(25px);
-                    line-height: 1;
-                    padding-bottom: 38px;
-                }
+			@include respond-to-min($tabletSize) {
+			
+				position: relative;
+				display: table-cell;
+				min-height: 315px;
 
-                @include respond-to-min($laptopSize) {
-                    font-size: rem(25px);
-                    line-height: 1;
-                    padding-bottom: 38px;
-                }
-            }
+				&.social-links {
+					min-height: 315px;
+				}
+			}
 
-            .location-address {
-                color: #a1b1bc;
-                font-family: "robotoregular";
-                display: block;
+			@include respond-to-min($desktopSize) {
+				position: relative;
+				display: table-cell;
+				min-height: 315px;
 
-                @include respond-to-min($desktopSize) {
-                    font-size: rem(15px);
-                    line-height: rem(25px);
-                }
+				&.social-links {
+					min-height: 315px;
+				}
+			}
 
-                @include respond-to-min($laptopSize) {
-                    font-size: rem(15px);
-                    line-height: rem(25px);
-                }
-            }
+			@include respond-to-min($laptopSize) {
+				position: relative;
+				display: table-cell;
+				min-height: 315px;
+				margin-bottom: 0;
 
-            .contact-info {
-                position: absolute;
-                bottom: 6%;
-                font-size: rem(20px);
-                line-height: rem(28px);
-                font-family: "robotolight";
+				padding: rem(40px) rem(10px);
 
-                b {
-                    font-family: "robotobold";
-                    display: inline-block;
-                    vertical-align: middle;
-                    font-weight: normal;
-                }
+				&.social-links {
+					min-height: 315px;
+				}
+			}
+			@include respond-to-min($bigScreen) {
+				padding: rem(40px) rem(30px);
+			}
 
-                .iconMail {
-                    background: transparent url(/img/iconMail.png) left bottom no-repeat;
-                    width: 25px;
-                    height: 20px;
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-right: 18px;
-                }
+			.location-title {
+				font-family: 'robotoblack';
+				color: #2c3e50;
+				display: block;
+				text-transform: uppercase;
 
-                .iconTel {
-                    background: transparent url(/img/iconTel.png) left bottom no-repeat;
-                    width: 25px;
-                    height: 22px;
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-right: 18px;
-                }
+				@include respond-to-min($desktopSize) {
+					font-size: rem(25px);
+					line-height: 1;
+					padding-bottom: 38px;
+				}
 
-                .iconFB {
-                    background: transparent url(/img/iconFB.png) left center no-repeat;
-                    width: 30px;
-                    height: 23px;
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-right: 5px;
-                }
+				@include respond-to-min($laptopSize) {
+					font-size: rem(20px);
+					line-height: 1;
+					padding-bottom: 38px;
+				}
+				@include respond-to-min($bigScreen) {
+					font-size: rem(25px);
+					line-height: 1;
+					padding-bottom: 38px;
+				}
+			}
 
-                .iconTwiiter {
-                    background: transparent url(/img/iconTeewter.png) left center no-repeat;
-                    width: 30px;
-                    height: 23px;
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-right: 5px;
-                }
+			.location-address {
+				color: #a1b1bc;
+				font-family: "robotoregular";
+				display: block;
 
-                .iconLinkedIn {
-                    background: transparent url(/img/iconLinkedIn.png) left center no-repeat;
-                    width: 30px;
-                    height: 23px;
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-right: 5px;
-                }
-            }
+				@include respond-to-min($desktopSize) {
+					font-size: rem(15px);
+					line-height: rem(25px);
+				}
 
-            &.social-links .contact-info {
-                a {
-                    margin-top: 10px;
-                    display: block;
-                    color: #a1b1bc;
+				@include respond-to-min($laptopSize) {
+					font-size: rem(15px);
+					line-height: rem(25px);
+				}
+			}
 
-                    b {
-                        color: #a1b1bc;
-                    }
+			.contact-info {
+				position: absolute;
+				bottom: 6%;
+				font-size: rem(20px);
+				line-height: rem(28px);
+				font-family: "robotolight";
 
-                    &:hover, &:focus {
-                        text-decoration: none;
+				@include respond-to-min($laptopSize) {
+					font-size: rem(16px);
+				}
+				@include respond-to-min($bigScreen) {
+					font-size: rem(20px);
+				}
 
-                        b {
-                            color: #2c3e50;
-                        }
-                    }
-                }
-            }
-        }
+				b {
+					font-family: "robotobold";
+					display: inline-block;
+					vertical-align: middle;
+					font-weight: normal;
+				}
 
-        @include respond-to-min($tabletSize) {
-            font-size: 1.5rem;
+				.iconMail {
+					background: transparent url(/img/iconMail.png) left bottom no-repeat;
+					width: 25px;
+					height: 20px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 18px;
+				}
 
-            & {
-                display: table;
+				.iconTel {
+					background: transparent url(/img/iconTel.png) left bottom no-repeat;
+					width: 25px;
+					height: 22px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 18px;
+				}
 
-                .location-image, .location-info {
-                    position: relative;
-                    display: table-cell;
-                    min-height: 315px;
+				.iconFB {
+					background: transparent url(/img/iconFB.png) left center no-repeat;
+					width: 30px;
+					height: 23px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 5px;
+				}
 
-                    &.social-links {
-                        min-height: 315px;
-                    }
-                }
-            }
-        }
+				.iconTwiiter {
+					background: transparent url(/img/iconTeewter.png) left center no-repeat;
+					width: 30px;
+					height: 23px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 5px;
+				}
 
-        @include respond-to-min($desktopSize) {
-            & {
-                display: table;
+				.iconLinkedIn {
+					background: transparent url(/img/iconLinkedIn.png) left center no-repeat;
+					width: 30px;
+					height: 23px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 5px;
+				}
+			}
 
-                .location-image, .location-info {
-                    position: relative;
-                    display: table-cell;
-                    min-height: 315px;
+			&.social-links .contact-info {
+				a {
+					margin-top: 10px;
+					display: block;
+					color: #a1b1bc;
 
-                    &.social-links {
-                        min-height: 315px;
-                    }
-                }
-            }
-        }
+					b {
+						color: #a1b1bc;
+					}
 
-        @include respond-to-min($laptopSize) {
-            .location-info {
-                margin-bottom: 0;
-            }
+					&:hover, &:focus {
+						text-decoration: none;
 
-            & {
-                display: table;
+						b {
+							color: #2c3e50;
+						}
+					}
+				}
+			}
+		}
 
-                .location-image, .location-info {
-                    position: relative;
-                    display: table-cell;
-                    min-height: 315px;
+		@include respond-to-min($tabletSize) {
+			font-size: 1.5rem;
 
-                    &.social-links {
-                        min-height: 315px;
-                    }
-                }
-            }
+			display: table;
 
-            .location-image {
-                margin-bottom: 0;
+			.location-image {
+				position: relative;
+				display: table-cell;
+				min-height: 315px;
 
-                img {
-                    max-height: 315px;
-                }
-            }
-        }
-    }
+				&.social-links {
+					min-height: 315px;
+				}
+			}
+		}
+
+		@include respond-to-min($desktopSize) {
+			display: table;
+
+			.location-image {
+				position: relative;
+				display: table-cell;
+				min-height: 315px;
+
+				&.social-links {
+					min-height: 315px;
+				}
+			}
+		}
+
+		@include respond-to-min($laptopSize) {
+			display: table;
+
+			.location-image {
+				position: relative;
+				display: table-cell;
+				min-height: 315px;
+
+				&.social-links {
+					min-height: 315px;
+				}
+			}
+
+			.location-image {
+				margin-bottom: 0;
+
+				img {
+					max-height: 315px;
+				}
+			}
+		}
+	}
 }
