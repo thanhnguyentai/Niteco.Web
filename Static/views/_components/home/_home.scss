@@ -32,7 +32,6 @@ $numberRow: 3;
     height: 100%;
     float: left;
     overflow: hidden;
-    transition: all 500ms ease-out;
 
     @include respond-to-min($tabletSize) {
         width: 50%;
@@ -302,21 +301,29 @@ $numberRow: 3;
 .home-block-row {
     position: relative;
     display: block;
-    height: 100%/$numberRow;
     padding: 0;
+    height: 200px;
+
+    @include respond-to-min($tabletSize) {
+        height: 100%/$numberRow;
+    }
 }
 
 .home-column-left {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 50%;
-    height: 100%;
+    position: relative;
+    width: 100%;
     font-size: 0px;
 
-    @include respond-to-max($desktopSize) {
-        width: 100%;
-        position: relative;
+    @include respond-to-min($tabletSize) {
+        height: 100%;
+    }
+
+    @include respond-to-min($desktopSize) {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 50%;
     }
 
     .home-video-container {
@@ -377,6 +384,13 @@ $numberRow: 3;
             text-align: center;
             margin-top: 2rem;
             transform: translate(0,50%);
+
+            h3 {
+                padding: 0;
+                margin: 0;
+                font-weight: normal;
+                font-size: 1px;
+            }
 
             img {
                 max-width: 100%;
@@ -454,7 +468,11 @@ $numberRow: 3;
     }
 
     .home-block-row:nth-child(1) {
-        height: ($numberRow - 1) * 100% / $numberRow;
+        height: 250px;
+
+        @include respond-to-min($tabletSize) {
+            height: ($numberRow - 1) * 100% / $numberRow;
+        }
     }
 }
 

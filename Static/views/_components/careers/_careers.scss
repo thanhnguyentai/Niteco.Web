@@ -13,6 +13,11 @@
         a.view-more-jobs {
             text-transform: uppercase;
             font-size: rem(14px);
+            transition:0.25s ease;
+            &:hover {
+                background: #fff;
+                color: #facd20;
+            }
         }
 
         @include respond-to-min($laptopSize) {

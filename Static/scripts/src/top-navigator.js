@@ -38,10 +38,10 @@
                 });
                 menuContainer.addClass('scroll-menu');
 
-                animate(menuContainer, { top: 0, duration: 500 });
+                animate(menuContainer, { top: 0, duration: 200 });
             } else if (scrollTop <= scrollTopToDisplay && currentPosition == fixedPosition) {
                 currentPosition = absolutePosition;
-                animate(menuContainer, { top: -menuContainer.height() + 'px', duration: 500 }).then(function () {
+                animate(menuContainer, { top: -menuContainer.height() + 'px', duration: 200 }).then(function () {
                     menuContainer.css({
                         'position': 'absolute',
                         'top': '0'

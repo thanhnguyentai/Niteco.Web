@@ -1,5 +1,5 @@
 ﻿define(['base/page-scroll-animation', 'async!https://maps.googleapis.com/maps/api/js?key=AIzaSyB__eIsfbtydJhmiQwxQd7w30CgogsLk0k'], function (pageScrollAnimation) {
-    var contactUsContainer = null;
+    var mappOfficeContainer = $(".map-office-section");
     var initMap = function() {
         //set your google maps parameters
         var map_zoom = 3;
@@ -11,7 +11,7 @@
         //      ['Ho Chi Minh city, Vietnam', 10.7500, 106.6667, 2],
         //      ['Ha Noi, Vietnam', 21.0285, 105.8542, 1]
         //];
-        var locations = eval(contactUsContainer.attr('data-locations'));
+        var locations = eval(mappOfficeContainer.attr('data-locations'));
         //google map custom marker icon - .png fallback for IE11
         var is_internetExplorer11 = navigator.userAgent.toLowerCase().indexOf('trident') > -1;
         var marker_url = (is_internetExplorer11) ? '/img/cd-icon-location.png' : '/img/cd-icon-location.svg';

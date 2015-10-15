@@ -16,5 +16,11 @@
         "normal_text": " Look no further.",
         "button_text": "Contact Us",
         "button_url": "#"
+    },
+    "services_view_more": {
+        "hightlight_text": "Have a Project in Mind?",
+        "normal_text": " Let's see how we can help you",
+        "button_text": "Contact Us Now",
+        "button_url": "#"
     }
 }

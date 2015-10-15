@@ -11,7 +11,8 @@
     var t = $(window);
     
     function init() {
-        if (t.width() > 992 && container) {
+        //t.width() > 992 && 
+        if (container) {
             var listPersonGroup = container.find('.award-list--top .award-group');
 
             var bottomListContainer = container.find('.award-list--bottom');

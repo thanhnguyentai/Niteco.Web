@@ -56,6 +56,85 @@
         }
     }
 }
+@include respond-to-min($desktopSize)
+{
+       .award-group .__subgroup {
+        width:50%;
+        float: left
+    }
+}
+
+
+@include respond-to-min($tabletSize) {
+    .award-subgroup .__award {
+        width:50%;
+        float: left
+    }
+}
+
+@include respond-to-max($tabletSize) {
+    .award-list--top .__group--active ~ .__group .award {
+        display:none
+    }
+
+    .award-list--top .__subgroup--active+.__subgroup .__award {
+        display: none
+    }
+
+    .award-list--top .__subgroup--active .__award--selected+.__award {
+        display: none
+    }
+
+    .award-list--bottom .__award {
+        display: none
+    }
+
+    .award-list--bottom .__group--active ~ .__group .award {
+        display: table
+    }
+
+    .award-list--bottom .__subgroup--active .__award--selected+.__award {
+        display: table
+    }
+
+    .award-list--bottom .__subgroup--active+.__subgroup .__award {
+        display: table
+    }
+}
+@include respond-to-min-max($tabletSize,$desktopSize){
+    .award-list--top .__group--active ~ .__group .__award {
+        display:none
+    }
+
+    .award-list--top .__subgroup--active+.__subgroup .__award {
+        display: none
+    }
+
+    .award-list--bottom .__award {
+        display: none
+    }
+
+    .award-list--bottom .__group--active ~ .__group .award {
+        display: table
+    }
+
+    .award-list--bottom .__subgroup--active+.__subgroup .__award {
+        display: table
+    }
+}
+@include respond-to-min($desktopSize) {
+    .award-list--top .__group--active ~ .__group .__award {
+        display:none
+    }
+
+    .award-list--bottom .__award {
+        display: none
+    }
+
+    .award-list--bottom .__group--active ~ .__group .award {
+        display: table
+    }
+}
 
 .award {
     border-bottom: solid 15px #f0f1f3;
@@ -109,8 +188,8 @@
             padding-top: 18px;
             color: #2c3e50;
             display: inline-block;
-            font-family: 'robotoregular';
-
+            font-family: 'robotomedium';
+            font-size: rem(18px);
             @include respond-to-min($tabletSize) {
                 font-size: 1.125rem;
                 line-height: 1rem;
@@ -133,6 +212,20 @@
         }
 
         span {
+            display: block;
+            font-size: rem(15px);
+            font-family: 'robotoregular';
+            color: #a1b1bc;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+        i.arrow-icon {
+            width: 17px;
+            height: 19px;
+            background: url('/img/right-arrow.png') no-repeat;
+            position: absolute;
+            top: 32px;
+            right: 23px;
             display: block;
         }
     }
@@ -195,10 +288,12 @@
          .__award-btn #Rectangle-51 {
             fill: #2c3e50;
         }
+        i.arrow-icon {
+            background-position: 0 -19px;
+        }
     }
 }
-
-.award-info {
+ward-info {
     border-bottom: 1px solid #E9E9E9;
     border-top: 1px solid #E9E9E9;
     transition: all 0.5s ease;
@@ -236,6 +331,20 @@
     }
 }
 
+  @include respond-to-max($tabletSize){
+    .award-details .__container {
+      
+        padding: 20px 15px;
+
+        &:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+    }
+}
+
+
 .award-details--active {
     transition: all 0.5s ease;
 }
@@ -257,3 +366,11 @@
 .award-list--bottom .__group--active ~ .__group .award {
     display: block;
 }
+
+@media (max-width: 767px) {
+    .award .__award-btn {
+        bottom:15px;
+        width: 18px
+    }
+}
+

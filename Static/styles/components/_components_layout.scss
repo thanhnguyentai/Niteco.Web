@@ -10,7 +10,7 @@ body {
 
 .page-wrapper {
     backface-visibility: hidden;
-    background: #282828;
+    background: #fff;
     width: 100%;
 }
 
@@ -24,7 +24,6 @@ body {
         left: 0px;
         width: 100%;
 		height: 100%;
-		overflow: hidden;
         transform: translate3d(100%,0,0);
 
         &.animating {
@@ -42,7 +41,6 @@ body {
 
     &.animating {
         transform: translate3d(-100%,0,0);
-        overflow: hidden;
     }
 
     &.animating-back {

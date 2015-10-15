@@ -44,7 +44,7 @@
         "smallText": "How we",
         "largeText": "Work",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "/Static/compiled/pages/how-we-work.html"
+        "url": "/Static/compiled/pages/our-works.html"
     },
     "projects": {
         "background": "/img/featured-projects.jpg",
@@ -83,13 +83,13 @@
 		"backgroundHover": "/img/home-engagement-models-hover.jpg",
 		"text":"Engagement models",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "#"
+        "url": "/Static/compiled/pages/how-we-work.html"
     },
 	"charity":{
 		"background": "/img/home-nicef.jpg",
 		"backgroundHover": "/img/home-nicef-hover.jpg",
 		"text":"Niteco Charity",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "#"
+        "url": "http://charity.niteco.se"
 	}
 }

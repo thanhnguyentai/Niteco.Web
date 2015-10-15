@@ -183,7 +183,7 @@
         padding: 0 0;
         margin: 0 0;
     }
-    .job-requires_list {
+    .how-we-work-partnership_list {
         padding: 0 10px;
         li {
             list-style: none;
@@ -191,7 +191,7 @@
             padding-top: 15px;
             padding-bottom: 15px;
             padding-left: 45px;
-            background: url('/img/icon-tick.png') no-repeat 20px 25px;
+            background: url('/img/icon-tick.png') no-repeat 20px 22px;
             font-family: 'robotolight';
             font-size: rem(16px);
             line-height: rem(24px);
@@ -221,19 +221,6 @@
                 font-size: rem(24px);
                 letter-spacing: 2px;
             }
-
-			.job-requires_list {
-            padding: 0;
-            li {
-                list-style: none;
-				text-align : left;
-                padding-left: 35px;
-                background: url('/img/icon-tick.png') no-repeat 10px 10px;
-                font-family: 'robotolight';
-                font-size: rem(16px);
-                line-height: rem(40px);
-				}
-			}
             .partnership-models__description {
                 text-align: left;
                 font-family: 'robotolight';

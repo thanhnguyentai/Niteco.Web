@@ -78,7 +78,7 @@
 
         pageWrapper.append(content);
 
-        $('body').toggleClass('overflow-hidden');
+        //$('body').toggleClass('overflow-hidden');
 
         var displayPage = function() {
             var timeout = setTimeout(function() {
@@ -111,7 +111,7 @@
                         jitRequire.findDeps(pageWrapper, function() {
                             var timeout2 = setTimeout(function() {
                                 clearTimeout(timeout2);
-                                $('body').toggleClass('overflow-hidden');
+                                //$('body').toggleClass('overflow-hidden');
 
                                 if (callback)
                                     callback(title);
@@ -129,6 +129,7 @@
                 duration: 500,
                 offset: 0
             }).then(function () {
+                $('body').css('opacity', 1);
                 displayPage();
             });
         }
@@ -143,6 +144,13 @@
             currentUrl = href;
             return true;
         }
+        return false;
+    }
+    
+    function urlFunction(href) {
+        if (href.indexOf('mailto') == 0)
+            return true;
+
         return false;
     }
 
@@ -176,8 +184,17 @@
         for (var index in items) {
             if (!items[index].data('registed')) {
                 items[index].on('click', function (e) {
-                    e.preventDefault();
                     var href = $(this).attr('href');
+                    
+                    if (urlFunction(href)) {
+                        window.location.href = href;
+                        return true;
+                    }
+                    
+                    if (this.host !== location.host)
+                        return true;
+                    
+                    e.preventDefault();
                     loadPageByHref(href, $(this), callback);
                     return false;
                 });

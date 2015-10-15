@@ -6,7 +6,7 @@
     background-color: #fff;
     background-size: cover;
     background-position: center center;
-    padding: 110px 0 110px;
+    padding: 60px 0;
     position: relative;
     z-index: 1;
     transition-delay: 0.5s;
@@ -27,7 +27,6 @@
         margin: 0 0 20px;
 
         @include respond-to-min($tabletSize) {
-            margin: 0;
         }
 
         .about-us-icon {
@@ -72,7 +71,8 @@
             color: #282828;
             padding: 0;
             margin: 0 0 20px;
-
+            font-size: rem(20px);
+            text-align: center;
             @include respond-to-min($tabletSize) {
                 font-size: rem(20px);
                 line-height: 30px;
@@ -81,6 +81,7 @@
             @include respond-to-min($desktopSize) {
                 font-size: rem(26px);
                 line-height: 35px;
+                text-align: left;
             }
 
             @include respond-to-min($laptopSize) {
@@ -101,15 +102,18 @@
             font-family: 'robotolight';
             width: 90%;
             margin: 0;
-
+            font-size: rem(16px);
+            text-align: center;
             @include respond-to-min($tabletSize) {
                 font-size: rem(16px);
                 line-height: 25px;
+                text-align: left;
             }
 
             @include respond-to-min($desktopSize) {
                 font-size: rem(18px);
                 line-height: 30px;
+                text-align: left;
             }
 
             @include respond-to-min($laptopSize) {
@@ -131,14 +135,14 @@
         }
 
         .number__certified {
-            font-family: 'robotobold';
-            padding: 0 0 20px 0;
+            font-family: 'robotoblack';
+            padding: 0 0 10px 0;
             margin: 0;
-            color: #9ca5ae;
+            color: #cedae1;
             font-size: rem(200px);
             line-height: 200px;
             display: block;
-
+            opacity: 0.6;
             @include respond-to-min($tabletSize) {
                 font-size: rem(240px);
                 line-height: 120px;
@@ -148,6 +152,7 @@
             @include respond-to-min($desktopSize) {
                 font-size: rem(300px);
                 line-height: 150px;
+                margin: 0 0 30px;
             }
 
             @include respond-to-min($laptopSize) {
@@ -158,15 +163,14 @@
         }
 
         p {
-            color: #9ca5ae;
-            font-family: robotothin;
-            font-size: rem(12px);
+            color: #2c3e50;
+            font-family: 'latoregular';
+            font-size: rem(14px);
             line-height: 20px;
             margin: 0;
-            padding: 0;
-
+            padding: 16px 0 0;
+            opacity: 0.5;
             @include respond-to-min($tabletSize) {
-                font-size: rem(14px);
                 line-height: 30px;
             }
 
@@ -239,6 +243,8 @@
 
         @include respond-to-min($desktopSize) {
             display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
     }
 
@@ -280,15 +286,25 @@
         }
 
         @include respond-to-min($laptopSize) {
-            margin-left: 75px;
+            /*margin-left: 75px;
             padding: 200px 0px 320px;
             line-height: 60px;
-            font-size: rem(46px);
+            font-size: rem(46px);*/
+            margin-left: 75px;
+            padding: 200px 0px 320px;
+            line-height: 40px;
+            font-size: rem(32px);
         }
 
-        span {
+        span,b {
             color: #f9cd1f;
             font-family: 'robotoregular';
+        }
+        
+    }
+    @include respond-to-min($desktopSize) {
+        & {
+            padding: 110px 0;
         }
     }
 }
@@ -366,7 +382,7 @@
         }
 
         .description {
-            text-align: justify;
+            text-align: left;
         }
     }
 
@@ -412,10 +428,10 @@
             text-align: center;
 
             h2 {
-                font-family: 'robotoblack';
+                font-family: 'robotobold';
                 color: #fff;
                 margin: 0;
-
+                font-size: rem(30px);
                 @include respond-to-min($tabletSize) {
                     font-size: rem(35px);
                     line-height: rem(40px);
@@ -456,13 +472,13 @@
             .value-index {
                 font-family: 'robotoblack';
                 color: #cedae1;
-                font-size: rem(30px);
-                line-height: rem(30px);
-                margin: 0;
+                font-size: rem(40px);
+                line-height: 1;
+                margin: 0 0 20px;
                 padding: 0;
                 float: left;
                 width: 100%;
-
+                text-align: center;
                 @include respond-to-min($tabletSize) {
                     width: 90px;
                     padding: 0 0 25px;
@@ -473,23 +489,25 @@
                 @include respond-to-min($desktopSize) {
                     font-size: 7rem;
                     line-height: 7rem;
+                    text-align: left;
+                    margin: 0;
                 }
 
                 @include respond-to-min($laptopSize) {
-                    font-size: 10rem;
-                    line-height: 7rem;
+                    font-size: rem(170px);
+                    line-height: rem(123px);
                 }
 
                 @include respond-to-min($bigScreen) {
-                    font-size: 10rem;
-                    line-height: 7rem;
+                    font-size: rem(170px);
+                    line-height: rem(123px);
                 }
             }
 
             .value-description {
                 color: #a1b1bc;
                 font-family: 'robotothin';
-
+                text-align: justify;
                 @include respond-to-min($tabletSize) {
                     padding: 0 0 0 90px;
                     font-size: 1.5rem;
@@ -500,6 +518,7 @@
                     padding: 0 0 0 100px;
                     font-size: 1.5rem;
                     line-height: 1.875rem;
+                    text-align: left;
                 }
 
                 @include respond-to-min($laptopSize) {
@@ -518,7 +537,7 @@
                     font-family: 'robotothin';
                     margin: 0;
                     padding: 0 0 15px;
-
+                    text-align: center;
                     @include respond-to-min($tabletSize) {
                         font-size: 2rem;
                         line-height: 2rem;
@@ -527,6 +546,7 @@
                     @include respond-to-min($desktopSize) {
                         font-size: 2rem;
                         line-height: 2rem;
+                        text-align: left;
                     }
 
                     @include respond-to-min($laptopSize) {
@@ -708,7 +728,7 @@
         }
 
         img {
-            margin: 0 auto 20px;
+            margin: 0 auto 30px;
             display: block;
             width: auto;
         }
@@ -717,7 +737,7 @@
             color: #2e2c28;
             opacity: 0.5;
             font-family: 'latobold';
-            font-size: rem(20px);
+            font-size: rem(24px);
             line-height: rem(25px);
             margin: 0 0 20px;
 
@@ -744,7 +764,7 @@
             color: #282828;
             font-family: 'latoitalic';
             font-size: rem(16px);
-            line-height: rem(20px);
+            line-height: 1.7;
             margin: 0;
             padding: 0;
 

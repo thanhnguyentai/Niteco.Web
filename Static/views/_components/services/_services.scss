@@ -17,7 +17,6 @@
     }
 
     .service-item__container {
-        width: 270px;
         margin: 0 auto 1.8rem;
         border: 1px solid #f0f1f3;
         padding: 0 0 1.8rem;
@@ -35,7 +34,6 @@
         }
 
         .service-item__image {
-            width: 270px;
             height: 270px;
             background-color: #f0f1f3;
             background-size: 100% auto;
@@ -61,6 +59,14 @@
                 line-height: 1.5rem;
             }
         }
+        @include respond-to-min($desktopSize) {
+            & {
+                width: 270px;
+                .service-item__image {
+                    width: 270px;
+                }
+            }
+        }
     }
 }
 
@@ -70,8 +76,10 @@
     background: url('/img/service_contact_bg.png') no-repeat center center;
     background-size: 100% 100%;
     background-color: #282828;
-    padding: 50px 0;
-
+    padding: 20px 0 50px;
+    a.view-more-jobs {
+        text-transform: uppercase;
+    }
     .service-contact__question {
         font-family: 'robotobold';
         color: #fff;

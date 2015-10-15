@@ -1,7 +1,4 @@
-﻿
-
-
-.list-projects {
+﻿.list-projects {
     list-style: none;
     overflow: hidden;
     padding: 0;
@@ -468,3 +465,14 @@
     }
 }
 
+.our-work-footer{
+     .home-block-item .home-block-item__content-container .home-block-item__content{
+          margin-top:110px;
+      }
+
+     & .home-block-item:hover{
+        .home-block-item__content-container .home-block-item__content{
+                  margin-top:80px;                
+        }            
+     }
+}
