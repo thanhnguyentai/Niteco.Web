@@ -14,10 +14,6 @@
             text-transform: uppercase;
             font-size: rem(14px);
             transition:0.25s ease;
-            &:hover {
-                background: #fff;
-                color: #facd20;
-            }
         }
 
         @include respond-to-min($laptopSize) {
@@ -168,6 +164,14 @@
     .careers-apply-step > div.col-sm-4:last-child {
         .careers-step-detail {
             margin-bottom: 0;
+        }
+    }
+
+    .careers-apply-step {
+        @for $i from 1 through 3 {
+            .col-xs-12:nth-child(#{$i}) {
+                transition-delay: 200ms * ($i - 1);
+            }
         }
     }
 }

@@ -7,7 +7,7 @@
 
     }
     .fade-in{    
-        transition:all 1s ease-in-out;
+        transition:all 0.5s ease-in-out;
         opacity: 1;
         &.inactive{
             opacity:0;    
@@ -18,7 +18,7 @@
         transition:all 0.5s ease-in-out;
         transform: translateX(0%);  
         &.inactive{
-            transform: translateX(-100%); 
+            transform: translateX(-100px); 
             opacity:0;
         }
     }
@@ -28,7 +28,7 @@
         transition:all 0.5s ease-in-out;
         transform: translateX(0%);  
         &.inactive{
-            transform: translateX(100%); 
+            transform: translateX(100px); 
             opacity:0;
         }
     }
@@ -36,7 +36,7 @@
         transition:all 0.5s ease-in-out;
         transform: translateY(0%);  
         &.inactive{
-            transform: translateY(-100%); 
+            transform: translateY(-100px); 
             opacity:0;
         }
     }
@@ -44,7 +44,7 @@
         transition:all 0.5s ease-in-out;
         transform: translateY(0%);  
         &.inactive{
-            transform: translateY(100%); 
+            transform: translateY(100px); 
             opacity:0;
         }
     }
@@ -156,8 +156,7 @@
 
     .rocket-fly{  
         transform: translateY(0px);
-        transition:all 1s ease-in-out;
-        transition-delay:1s;
+        transition:all 0.5s ease-in-out;
         &.inactive{
 	        transform: translateY(140px);
         }

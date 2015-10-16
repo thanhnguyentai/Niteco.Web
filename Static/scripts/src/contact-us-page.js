@@ -41,25 +41,19 @@
 //poi stands for point of interest - don't show these lables on the map
                 featureType: "poi",
                 elementType: "labels",
-                stylers: [
-                    { visibility: "off" }
-                ]
+               
             },
             {
                 //don't show highways lables on the map
                 featureType: 'road.highway',
                 elementType: 'labels',
-                stylers: [
-                    { visibility: "off" }
-                ]
+               
             },
             {
                 //don't show local road lables on the map
                 featureType: "road.local",
                 elementType: "labels.icon",
-                stylers: [
-                    { visibility: "off" }
-                ]
+                
             },
             {
                 //don't show arterial road lables on the map
@@ -217,6 +211,7 @@
         var infowindow = new google.maps.InfoWindow();
 
         var marker, i, currentMark;
+        var markers = new Array();
 
         for (i = 0; i < locations.length; i++) {
             marker = new google.maps.Marker({
@@ -228,15 +223,13 @@
 
             google.maps.event.addListener(marker, 'click', (function (marker, i) {
                 return function () {
-                  
                     marker.setAnimation(google.maps.Animation.BOUNCE);
                     infowindow.setContent(locations[i][0]);
                     infowindow.open(map, marker);
                     currentMark = marker;
                 };
             })(marker, i));
-            
-
+            markers.push(marker);
         }
         google.maps.event.addListener(infowindow, 'closeclick', function () {
             currentMark.setAnimation(null);
@@ -248,6 +241,27 @@
         //insert the zoom div on the top left of the map
         map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
 
+
+        $(".location-item .iconMarker").each(function (index) {
+            $(this).on('click', function () {
+                $("html, body").animate({
+                    scrollTop: '-85px'
+                }, 300);
+                map.setZoom(18);
+                map.setCenter(markers[markers.length-index-1].getPosition());
+            });
+        });
+        $(".location-item .viewmap").each(function (index) {
+            $(this).on('click', function () {
+                $("html, body").animate({
+                    scrollTop: '-85px'
+                }, 300);
+                map.setZoom(18);
+                map.setCenter(markers[markers.length - index - 1].getPosition());
+                google.maps.event.trigger(markers[markers.length - index - 1], 'click');
+            });
+        });
+        
     };
 
     //add custom buttons for the zoom-in/zoom-out on the map

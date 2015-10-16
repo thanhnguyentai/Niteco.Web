@@ -125,11 +125,12 @@
         if ($(window).scrollTop() <= 0) {
             displayPage();
         } else {
+            displayPage();
+            return;
             animate($('body'), 'scroll', {
                 duration: 500,
                 offset: 0
             }).then(function () {
-                $('body').css('opacity', 1);
                 displayPage();
             });
         }

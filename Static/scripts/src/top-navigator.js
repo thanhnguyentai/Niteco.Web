@@ -8,16 +8,41 @@
     var isMenuShowed = false;
     var callbackSearch = null;
     var enableToggleMenu = true;
-    
+
+    function init() {
+        registerEvent();
+        generateEmail();
+    }
+
+    function generateEmail() {
+        var coded = "rN0p@Nr9tPp.PpA";
+        var key = "gxR95JMUZkTbiXpf3c1QOCBnjhurEH0KPmVeGzNDF6ys8qvwA7tadWSLI4Yl2o";
+        var shift = coded.length;
+        var link = "";
+        var ltr = "";
+        for (var i = 0; i < coded.length; i++) {
+            if (key.indexOf(coded.charAt(i)) == -1) {
+                ltr = coded.charAt(i);
+                link += (ltr);
+            }
+            else {
+                ltr = (key.indexOf(coded.charAt(i)) - shift + key.length) % key.length;
+                link += (key.charAt(ltr));
+            }
+        }
+        
+        menuContainer.find('.top-navigator__mail').html('info@niteco.com').attr('href', 'mailto:' + link);
+    }
+
     function registerEvent() {
         menuContainer.find('.hamburger-menu__button').on('click', showMenu);
         menuContainer.find('a').on('click', hideMenu);
-        
-        requestPage.registRequestByContainer(menuContainer, function(href) {
+
+        requestPage.registRequestByContainer(menuContainer, function (href) {
             selectMenu(href);
         });
 
-        requestPage.registerCallbackHistoryChange(function(href) {
+        requestPage.registerCallbackHistoryChange(function (href) {
             selectMenu(href);
         });
 
@@ -38,10 +63,10 @@
                 });
                 menuContainer.addClass('scroll-menu');
 
-                animate(menuContainer, { top: 0, duration: 200 });
+                animate(menuContainer, { top: 0 }, { duration: 200, easing: 'easeOutQuad' });
             } else if (scrollTop <= scrollTopToDisplay && currentPosition == fixedPosition) {
                 currentPosition = absolutePosition;
-                animate(menuContainer, { top: -menuContainer.height() + 'px', duration: 200 }).then(function () {
+                animate(menuContainer, { top: -menuContainer.height() + 'px' }, { duration: 200, easing: 'easeOutQuad' }).then(function () {
                     menuContainer.css({
                         'position': 'absolute',
                         'top': '0'
@@ -49,20 +74,28 @@
                     menuContainer.removeClass('scroll-menu');
                 });
             }
-        }, 10);
+        }, 0);
 
         pageScroll.addCallback(function (scrollTop) {
             callbackScroll(scrollTop);
         });
     }
-    
+
     function showMenu() {
         if (!enableToggleMenu)
             return;
-        
+
         enableToggleMenu = false;
         isMenuShowed = !isMenuShowed;
-        
+
+
+        if (isMenuShowed) {
+            var bodyMask = $(this).parents('body').find('.content-wrapper .content-wrapper-mask');
+            if (!bodyMask || bodyMask.length == 0) {
+                $(this).parents('body').find('.content-wrapper').append('<div class="content-wrapper-mask"></div>');
+            }
+        }
+            
         $(this).parents('body').find('.content-wrapper').toggleClass('show-menu');
 
         var callbackEnTransition = _.debounce(function () {
@@ -76,19 +109,19 @@
                 enableToggleMenu = true;
             }
         }, 10);
-        
+
         $(this).parents('.top-navigator-container').one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
             callbackEnTransition();
         });
-        
-        $(this).parents('.top-navigator-container').toggleClass('is-active'); 
+
+        $(this).parents('.top-navigator-container').toggleClass('is-active');
         $('body').toggleClass('overflow-hidden');
 
         if (!isMenuShowed && callbackSearch)
             callbackSearch(isMenuShowed);
     }
-    
-    
+
+
     function selectMenu(href) {
         var listItems = menuContainer.find('.top-navigator__menu-container').find('a');
         for (var i = 0; i < listItems.length; i++) {
@@ -107,31 +140,31 @@
             e.preventDefault();
         }
         isMenuShowed = !isMenuShowed;
-        
+
         menuContainer.toggleClass('is-active');
         menuContainer.parents('body').find('.content-wrapper').toggleClass('show-menu');
         $('body').removeClass('overflow-hidden');
 
         if (callbackSearch)
             callbackSearch(isMenuShowed);
-        
+
         return false;
     }
-    return {        
+    return {
         init: function (container) {
             menuContainer = container;
-            registerEvent();
+            init();
         },
-        
+
         registerShowSearch: function (callback) {
             callbackSearch = callback;
         },
 
         selectMenu: selectMenu,
-        
+
         hideMenu: hideMenu,
-        
-        getContainer: function() {
+
+        getContainer: function () {
             return menuContainer;
         }
     };

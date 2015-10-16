@@ -134,6 +134,7 @@
             transform-origin: 50% 50%;
             transform: translate(0, -50%) scale(0.6);
             left: -90px;
+            backface-visibility: hidden;
 
             @include respond-to-min($tabletSize) {
                 left: -127px;
@@ -154,7 +155,7 @@
                 width: 65px;
                 height: 74px;
                 position: absolute;
-                left: 54%;
+                left: 52%;
                 transform: translate(-50%, 0);
                 top: -17px;
                 overflow: hidden;
@@ -169,23 +170,22 @@
 
             &__head {
                 position: absolute;
-                width: 61px;
-                height: 28px;
+                width: 107px;
+                height: 34px;
                 background: url('/img/home-careers-icon.png') no-repeat center top;
                 top: 0px;
-                left: 50%;
-                transform: translate(-50%, 0);
+                left: 0px;
                 transition: transform 500ms ease-in-out;
-                transform-origin: 0 100%;
+                transform-origin: 22px 100%;
             }
 
             &__body {
                 position: absolute;
                 width: 107px;
-                height: 113px;
-                top: 28px;
+                height: 108px;
+                top: 34px;
                 left: 0;
-                background: url('/img/home-careers-icon.png') no-repeat center -28px;
+                background: url('/img/home-careers-icon.png') no-repeat center -34px;
             }
         }
     }
@@ -204,6 +204,7 @@
             margin: 0 0 0px;
             transform-origin: 50% 20%;
             transform: scale(0.6);
+            backface-visibility: hidden;
 
             @include respond-to-min($tabletSize) {
                 margin: 0 0 30px;
@@ -436,7 +437,7 @@
         /*-- career animation --*/
         .career-animation {
             &__head {
-                transform: translate(-50%, 0) rotate(-135deg);
+                transform: rotate(-135deg);
             }
 
             &__spins {

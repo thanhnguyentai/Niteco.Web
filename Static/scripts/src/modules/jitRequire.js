@@ -50,7 +50,7 @@ define(['jquery', 'underscore'], function ($, _) {
 	function traceModules (deps) {
 
 		$.when.apply(this, deps).done(function () {
-		    console.log('INFO: Modules loaded', Array.prototype.slice.call(arguments));
+		    //console.log('INFO: Modules loaded', Array.prototype.slice.call(arguments));
 		    if (callbackAfterLoaded)
 		        callbackAfterLoaded();
 		});

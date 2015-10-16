@@ -12,8 +12,8 @@
     transition-delay: 0.5s;
 
     &.record-number {
-        .col-xs-12:last-child{
-            .about-us-info{
+        .col-xs-12:last-child {
+            .about-us-info {
                 margin: 0;
             }
         }
@@ -23,7 +23,6 @@
         background: #fff;
         text-align: center;
         padding: 47px 0 51px;
-
         margin: 0 0 20px;
 
         @include respond-to-min($tabletSize) {
@@ -73,6 +72,7 @@
             margin: 0 0 20px;
             font-size: rem(20px);
             text-align: center;
+
             @include respond-to-min($tabletSize) {
                 font-size: rem(20px);
                 line-height: 30px;
@@ -104,6 +104,7 @@
             margin: 0;
             font-size: rem(16px);
             text-align: center;
+
             @include respond-to-min($tabletSize) {
                 font-size: rem(16px);
                 line-height: 25px;
@@ -143,6 +144,7 @@
             line-height: 200px;
             display: block;
             opacity: 0.6;
+
             @include respond-to-min($tabletSize) {
                 font-size: rem(240px);
                 line-height: 120px;
@@ -170,6 +172,7 @@
             margin: 0;
             padding: 16px 0 0;
             opacity: 0.5;
+
             @include respond-to-min($tabletSize) {
                 line-height: 30px;
             }
@@ -226,7 +229,7 @@
             }
         }
 
-        .yellow-divider{
+        .yellow-divider {
             margin-top: 20px;
         }
     }
@@ -243,7 +246,6 @@
 
         @include respond-to-min($desktopSize) {
             display: block;
-            background-size: contain;
             background-repeat: no-repeat;
         }
     }
@@ -268,7 +270,7 @@
         line-height: 28px;
         font-size: rem(20px);
         padding: 20px 0;
-        transition-delay: 1.5s;
+        transition-delay: 0.5s;
 
         @include respond-to-min($tabletSize) {
             line-height: 40px;
@@ -296,12 +298,12 @@
             font-size: rem(32px);
         }
 
-        span,b {
+        span, b {
             color: #f9cd1f;
             font-family: 'robotoregular';
         }
-        
     }
+
     @include respond-to-min($desktopSize) {
         & {
             padding: 110px 0;
@@ -432,6 +434,7 @@
                 color: #fff;
                 margin: 0;
                 font-size: rem(30px);
+
                 @include respond-to-min($tabletSize) {
                     font-size: rem(35px);
                     line-height: rem(40px);
@@ -461,11 +464,9 @@
             padding: 35px 40px;
             margin-bottom: 40px;
 
-            & {
-                @for $i from 1 through 5 {
-                    &:nth-child(#{$i}) {
-                        transition-delay: 200ms * $i;
-                    }
+            @for $i from 2 through 6 {
+                &:nth-child(#{$i}) {
+                    transition-delay: 200ms * ($i - 2);
                 }
             }
 
@@ -479,6 +480,7 @@
                 float: left;
                 width: 100%;
                 text-align: center;
+
                 @include respond-to-min($tabletSize) {
                     width: 90px;
                     padding: 0 0 25px;
@@ -508,6 +510,7 @@
                 color: #a1b1bc;
                 font-family: 'robotothin';
                 text-align: justify;
+
                 @include respond-to-min($tabletSize) {
                     padding: 0 0 0 90px;
                     font-size: 1.5rem;
@@ -538,6 +541,7 @@
                     margin: 0;
                     padding: 0 0 15px;
                     text-align: center;
+
                     @include respond-to-min($tabletSize) {
                         font-size: 2rem;
                         line-height: 2rem;

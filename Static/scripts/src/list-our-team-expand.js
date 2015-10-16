@@ -9,7 +9,7 @@
     }
 
     var t = $(window);
-    
+
     function init() {
         //t.width() > 992 && 
         if (container) {
@@ -40,19 +40,18 @@
 
                     "slide" === type ? memberDetail.finish().slideDown(500) : memberDetail.finish().fadeIn(500);
                     teamMember.removeClass("__award--selected");
-                    memberPreview.addClass("__award--selected");
                     ourTeamSelector.find(".__subgroup").removeClass("__subgroup--active");
                     ourTeamSelector.find(".__group").removeClass("__group--active");
-                    memberPreview.closest(".__subgroup").addClass("__subgroup--active");
-                    memberPreview.closest(".__group").addClass("__group--active");
 
-                    if (device() === 'mobile') {
-                        $("html, body").animate({
-                            scrollTop: (memberPreview.offset().top - 85) + 'px'
-                        }, 300);
-                    }
-                    
-                    
+                    setTimeout(function() {
+                        memberPreview.addClass("__award--selected");
+                        memberPreview.closest(".__subgroup").addClass("__subgroup--active");
+                        memberPreview.closest(".__group").addClass("__group--active");
+                    }, 0);
+
+                    $("html, body").animate({
+                        scrollTop: (memberPreview.offset().top - 85) + 'px'
+                    }, 300);
                 };
             if ($this.hasClass("__award--selected"))
                 memberPreview.removeClass("__award--selected"),

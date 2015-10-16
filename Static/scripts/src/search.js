@@ -103,6 +103,7 @@
 
     function registerEventShowSearch() {
         var showSearchPanel = _.debounce(function () {
+            searchContainer.find('.seach-box__placeholder').css('display', 'none');
             searchContainer.addClass('expanding');
             animate(searchContainer, {
                 'padding-right': 0,
@@ -122,10 +123,9 @@
             searchContainer.find('.close-button').one('click', function (e) {
                 closeSearchBox();
             });
-        }, 50);
+        }, 10);
 
         searchContainer.one('click', function () {
-            searchContainer.find('.seach-box__placeholder').css('display', 'none');
             showSearchPanel();
         });
     }
@@ -184,8 +184,12 @@
                 duration: 500, easing: 'ease-in-out'
             }).then(function () {
                 searchContainer.removeClass('expanding');
-                registerEventShowSearch();
                 searchContainer.find('.seach-box__placeholder').css('display', 'block');
+                
+                var timeoutRegister = setTimeout(function () {
+                    clearTimeout(timeoutRegister);
+                    registerEventShowSearch();
+                },0);
 
                 if (callback)
                     callback();

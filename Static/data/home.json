@@ -19,14 +19,14 @@
         "smallText": "Check available positions?",
         "largeText": "Careers with Us",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "#"
+        "url": "/Static/compiled/pages/careers.html"
     },
 	"rightOurTeam": {
         "background": "/img/careers.jpg",
         "smallText": "Tell us what you need?",
         "largeText": "Contact Us",
         "description": "This text here is just a tool to give you place holder for your own real copy",
-        "url": "#"
+        "url": "/Static/compiled/pages/contact-us.html"
     },
     "services": {
         "background": "/img/home-services.jpg",

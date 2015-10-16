@@ -41,6 +41,17 @@
 
     .our-processes-container {
         .process {
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    transition-delay: 200ms * ($i - 1);
+                }
+            }
+            @for $i from 4 through 6 {
+                &:nth-child(#{$i}) {
+                    transition-delay: 200ms * ($i - 4);
+                }
+            }
+
             margin-bottom: 30px;
 
             &:nth-child(3n) {
@@ -210,6 +221,11 @@
         padding: 0 0;
         margin-top: 75px;
         position: relative;
+
+        .col-xs-12:nth-child(2){
+            transition-delay: 0.2s;
+        }
+
         .partnership-models {
             background: #fff;
             margin-bottom: 75px;

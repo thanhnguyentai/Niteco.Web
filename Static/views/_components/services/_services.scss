@@ -9,9 +9,14 @@
     padding: 0 0 6rem;
     overflow:hidden;
     .col-xs-12{
-        @for $i from 1 through 8{
+        @for $i from 1 through 4{
             &:nth-child(#{$i}){
-                transition-delay: 150ms * $i;
+                transition-delay: 150ms * ($i - 1);
+            }
+        }
+        @for $i from 5 through 8{
+            &:nth-child(#{$i}){
+                transition-delay: 150ms * ($i - 5);
             }
         }
     }
@@ -76,7 +81,7 @@
     background: url('/img/service_contact_bg.png') no-repeat center center;
     background-size: 100% 100%;
     background-color: #282828;
-    padding: 20px 0 50px;
+    padding: 50px 0 50px;
     a.view-more-jobs {
         text-transform: uppercase;
     }
@@ -194,7 +199,7 @@
         padding: 50px 0;
 
         @include respond-to-min($tabletSize) {
-            width: 50%;
+            width: 52%;
             padding: 0;
         }
 
