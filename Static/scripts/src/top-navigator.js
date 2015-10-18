@@ -11,9 +11,8 @@
 
     function init() {
         registerEvent();
-        generateEmail();
     }
-
+    /*
     function generateEmail() {
         var coded = "rN0p@Nr9tPp.PpA";
         var key = "gxR95JMUZkTbiXpf3c1QOCBnjhurEH0KPmVeGzNDF6ys8qvwA7tadWSLI4Yl2o";
@@ -33,7 +32,7 @@
         
         menuContainer.find('.top-navigator__mail').html('info@niteco.com').attr('href', 'mailto:' + link);
     }
-
+    */
     function registerEvent() {
         menuContainer.find('.hamburger-menu__button').on('click', showMenu);
         menuContainer.find('a').on('click', hideMenu);

@@ -34,7 +34,7 @@
             }
 
             timeoutSearch = setTimeout(function () {
-                search(searchText, generateSearchResult);
+                search(searchAction + "?q=" +searchText, generateSearchResult);
             }, timeoutToSearch);
         });
 
@@ -45,7 +45,12 @@
         $(window).resize(function () {
             searchContainer.css('opacity',0);
             setTimeout(function () {
-                enableSearchBox(true);
+                if (!searchContainer.hasClass('active')) {
+                    enableSearchBox(true);
+                }
+                else{
+                    position = topNavigator.getContainer().find('.top-navigator__search-container').offset();
+                }
                 searchContainer.css('opacity', 1);
             }, 500);
         });
@@ -61,7 +66,10 @@
     function generateSearchResult(data) {
         animate(searchContainer.find('.search-default'), 'transition.slideDownOut', { duration: 300 });
         var result = $(searchResult(data.data));
-        searchContainer.find('.search-result').html('').append(result);
+        if(data.page == 1){
+            searchContainer.find('.search-result').html('');
+        }
+        searchContainer.find('.search-result').append(result);
 
         var listSearchItems = result.find('.search-result__item');
         for (var i = 0; i < listSearchItems.length; i++) {
@@ -73,6 +81,14 @@
                 return false;
             });
         }
+
+        checkShowMore(data);
+    }
+
+    function checkShowMore(data) {
+        if (data.hasShowMore) {
+
+        }
     }
 
     function openALink(href) {
@@ -82,14 +98,15 @@
         });
     }
 
-    function search(text, callback) {
+    function search(searchUrl, callback) {
+        searchContainer.find('.search-form').addClass('searching');
         $.ajax({
-            url: searchAction + "?q=" + text,
+            url: searchUrl,
             type: 'GET',
             async: true,
             datatype: 'json',
             success: function (data) {
-                console.log(data);
+                searchContainer.find('.search-form').removeClass('searching');
                 if (data.success) {
                     if (callback)
                         callback(data);

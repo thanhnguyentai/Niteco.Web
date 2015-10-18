@@ -53,6 +53,15 @@
 		        deps: [
 		            'jquery'
 		        ]
+		    },
+		    'lib/selectFx': {
+		        exports: 'SelectFx',
+		        deps: [
+		            'lib/classie'
+		        ]
+		    },
+		    'lib/classie': {
+		        exports: 'classie'
 		    }
 		}
 	});
